@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sửa Khóa Quang Huy - Cứu Hộ Khóa 24/7 Tại Lào Cai</title>
+  <meta name="description" content="Dịch vụ sửa khóa, mở khóa ô tô, làm chìa smartkey xe máy, khóa két sắt tại Lào Cai. Có mặt sau 15-30 phút, uy tín, chuyên nghiệp.">
+  <style>
+    :root {
+      --primary: #d32f2f;
+      --primary-dark: #b71c1c;
+      --secondary: #ffb300;
+      --dark: #1e293b;
+      --light: #f8fafc;
+      --gray: #64748b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--light); color: var(--dark); line-height: 1.6; padding-bottom: 70px; }
+    
+    /* Header */
+    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+    .top-bar { background: var(--primary); color: #fff; text-align: center; padding: 6px 12px; font-size: 13px; font-weight: bold; }
+    .nav-container { max-width: 1100px; margin: auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 20px; font-weight: 900; color: var(--primary); text-transform: uppercase; text-decoration: none; }
+    .btn-header { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; padding: 45px 20px; text-align: center; }
+    .hero h1 { font-size: 26px; color: var(--secondary); margin-bottom: 12px; line-height: 1.3; }
+    .hero p { font-size: 15px; color: #cbd5e1; max-width: 600px; margin: 0 auto 25px auto; }
+    .btn-call-hero { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(45deg, #d32f2f, #ff5252); color: #fff; font-size: 18px; font-weight: 800; padding: 14px 28px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(211,47,47,0.5); animation: pulse 1.8s infinite; }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+      100% { transform: scale(1); }
+    }
+
+    /* Badges */
+    .badges { display: flex; justify-content: center; gap: 12px; margin-top: 25px; flex-wrap: wrap; }
+    .badge-item { background: rgba(255,255,255,0.1); padding: 8px 14px; border-radius: 8px; font-size: 13px; border: 1px solid rgba(255,255,255,0.15); }
+
+    /* Services */
+    .section-title { text-align: center; margin: 40px 20px 20px 20px; font-size: 22px; font-weight: 800; color: var(--dark); }
+    .services-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; padding: 0 20px; }
+    .service-card { background: #fff; border-radius: 12px; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: transform 0.2s; }
+    .service-card:hover { transform: translateY(-4px); }
+    .service-icon { font-size: 32px; margin-bottom: 12px; display: block; }
+    .service-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--primary); }
+    .service-card p { font-size: 14px; color: var(--gray); line-height: 1.5; }
+
+    /* Commitments */
+    .commit-box { background: #fff; max-width: 1060px; margin: 35px 20px; padding: 25px; border-radius: 12px; border-left: 5px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
+    .commit-box h3 { font-size: 18px; margin-bottom: 12px; }
+    .commit-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+    .commit-list li { font-size: 14px; display: flex; align-items: center; gap: 8px; font-weight: 600; }
+
+    /* Quick Booking Form */
+    .form-container { max-width: 500px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+    .form-container h3 { text-align: center; margin-bottom: 15px; color: var(--primary); }
+    .form-group { margin-bottom: 12px; }
+    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; }
+    .btn-submit { width: 100%; background: var(--primary); color: #fff; padding: 12px; border: none; border-radius: 6px; font-weight: bold; font-size: 15px; cursor: pointer; }
+
+    /* Sticky Footer Buttons */
+    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; }
+    .btn-sticky { flex: 1; text-align: center; padding: 14px; text-decoration: none; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .btn-sticky-zalo { background: #0288d1; color: #fff; }
+    .btn-sticky-call { background: var(--primary); color: #fff; }
+
+    /* Footer */
+    footer { text-align: center; padding: 30px 20px; font-size: 13px; color: var(--gray); }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">🚨 CỨU HỘ KHÓA KHẨN CẤP 24/7 - CÓ MẶT SAU 15-30 PHÚT TẠI LÀO CAI</div>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Sửa Khóa Quang Huy</a>
+      <a href="tel:0855278627" class="btn-header">📞 0855.27.86.27</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>KẸT KHÓA? QUÊN CHÌA?<br>GỌI CÓ MẶT NGAY 24/7</h1>
+    <p>Chuyên cứu hộ khóa ô tô, lập trình Smartkey xe máy, mở khóa két sắt, cửa cuốn toàn khu vực Lào Cai. Thao tác chuẩn nghề, an toàn tuyệt đối 100% không trầy xước.</p>
+    <a href="tel:0855278627" class="btn-call-hero">
+      <span>📞</span> GỌI THỢ NGAY: 0855.27.86.27
+    </a>
+    <div class="badges">
+      <div class="badge-item">⚡ 15-30 Phút Có Mặt</div>
+      <div class="badge-item">🛡 Không Xước Sơn Ô Tô</div>
+      <div class="badge-item">💰 Báo Giá Chuẩn Trước Khi Làm</div>
+    </div>
+  </section>
+
+  <h2 class="section-title">DỊCH VỤ CHUYÊN NGHIỆP TẬN NƠI</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">🚗</span>
+      <h3>Khóa Ô Tô Cao Cấp</h3>
+      <p>Mở khóa cửa, cốp ô tô khi quên chìa hoặc xe hết bình bằng cây mở chuyên dụng. Lập trình làm thêm chìa remote, Smartkey mọi dòng xe.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🛵</span>
+      <h3>Smartkey Xe Máy</h3>
+      <p>Làm lại chìa khóa thông minh, cấp lại mã ID các dòng xe Honda, Yamaha (SH, Lead, Airblade, Vision, Vario...) khi mất hết chìa phụ.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔐</span>
+      <h3>Két Sắt & Khóa Cửa</h3>
+      <p>Xử lý két sắt quên mật mã, kẹt bi, mất chìa. Sửa chữa và thay thế khóa cửa tay gạt, khóa cửa cuốn gia đình an toàn tuyệt đối.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">⚙️</span>
+      <h3>Lõi Khóa Ruột Đặc Chống Kẹt</h3>
+      <p>Cung cấp lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa. Độ bền 2-5 năm, tự thay tại nhà tiết kiệm 80% chi phí.</p>
+    </div>
+  </div>
+
+  <div class="commit-box">
+    <h3>CAM KẾT TỪ THỢ KHÓA QUANG HUY</h3>
+    <ul class="commit-list">
+      <li>✅ Thợ tay nghề cao, tác phong nhanh nhẹn</li>
+      <li>✅ Báo giá minh bạch, không phát sinh phụ phí</li>
+      <li>✅ Đảm bảo an toàn cơ học, không phá cửa gãy ổ</li>
+      <li>✅ Bảo hành linh kiện thay thế dài hạn</li>
+    </ul>
+  </div>
+
+  <div class="form-container">
+    <h3>YÊU CẦU CỨU HỘ NHANH</h3>
+    <form onsubmit="handleFormSubmit(event)">
+      <div class="form-group">
+        <label>Số điện thoại của bạn (*):</label>
+        <input type="tel" id="userPhone" placeholder="Nhập số điện thoại liên hệ" required>
+      </div>
+      <div class="form-group">
+        <label>Vấn đề đang gặp:</label>
+        <select id="lockIssue">
+          <option>Quên chìa / Kẹt khóa ô tô</option>
+          <option>Mất chìa Smartkey xe máy</option>
+          <option>Kẹt khóa két sắt / Cửa cuốn</option>
+          <option>Cần thay lõi khóa cửa nhà</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Địa chỉ tại Lào Cai:</label>
+        <input type="text" id="userAddress" placeholder="Ví dụ: Cốc Lếu, Kim Tân, Sa Pa..." required>
+      </div>
+      <button type="submit" class="btn-submit">YÊU CẦU THỢ GỌI LẠI NGAY</button>
+    </form>
+  </div>
+
+  <footer>
+    <p><strong>Cơ sở Sửa Khóa Quang Huy Lào Cai</strong></p>
+    <p>Hotline phục vụ 24/7: 0855.27.86.27</p>
+    <p>© 2026 Sửa Khóa Quang Huy. Uy tín tạo dựng niềm tin.</p>
+  </footer>
+
+  <div class="sticky-bar">
+    <a href="https://zalo.me/0855278627" target="_blank" class="btn-sticky btn-sticky-zalo">
+      💬 Chat Zalo
+    </a>
+    <a href="tel:0855278627" class="btn-sticky btn-sticky-call">
+      📞 Gọi Thợ Ngay
+    </a>
+  </div>
+
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const phone = document.getElementById('userPhone').value;
+      const issue = document.getElementById('lockIssue').value;
+      const address = document.getElementById('userAddress').value;
+      
+      alert('Đã gửi yêu cầu thành công! Thợ khóa Quang Huy sẽ liên hệ lại ngay theo số ' + phone);
+      // Chuyển hướng hoặc mở cuộc gọi nếu cần
+      window.location.href = 'tel:0855278627';
+    }
+  </script>
+</body>
+</html>
