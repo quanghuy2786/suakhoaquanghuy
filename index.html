@@ -138,13 +138,31 @@
         <label>Số điện thoại của bạn (*):</label>
         <input type="tel" id="userPhone" placeholder="Nhập số điện thoại liên hệ" required>
       </div>
-      <div class="form-group">
+     <div class="form-group">
         <label>Vấn đề đang gặp:</label>
         <select id="lockIssue">
-          <option>Quên chìa / Kẹt khóa ô tô</option>
-          <option>Mất chìa Smartkey xe máy</option>
-          <option>Kẹt khóa két sắt / Cửa cuốn</option>
-          <option>Cần thay lõi khóa cửa nhà</option>
+          <option value="" disabled selected>-- Vui lòng chọn vấn đề bạn đang gặp --</option>
+          
+          <optgroup label="Khóa Ô Tô">
+            <option>Quên chìa / Kẹt khóa / Hết bình ô tô</option>
+          </optgroup>
+          
+          <optgroup label="Khóa Xe Máy">
+            <option>Mất chìa Smartkey xe máy (SH, Lead, Vision...)</option>
+            <option>Mất chìa khóa xe máy cơ (Cần làm chìa mới)</option>
+          </optgroup>
+          
+          <optgroup label="Khóa Cửa Nhà / Két Sắt">
+            <option>Cần hỗ trợ mở khóa cửa chính / Cửa cổng</option>
+            <option>Cần hỗ trợ mở khóa cửa phòng khách / Phòng ngủ</option>
+            <option>Cần hỗ trợ mở khóa cửa nhà vệ sinh</option>
+            <option>Kẹt khóa két sắt / Cửa cuốn</option>
+            <option>Cần thay lõi khóa / Lắp khóa mới</option>
+          </optgroup>
+          
+          <optgroup label="Vấn đề Khác">
+            <option>Vấn đề khác (Cần thợ tư vấn thêm)</option>
+          </optgroup>
         </select>
       </div>
       <div class="form-group">
