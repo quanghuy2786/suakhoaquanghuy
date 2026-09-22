@@ -191,13 +191,45 @@
   <script>
     function handleFormSubmit(e) {
       e.preventDefault();
+
+      // Đổi chữ trên nút để khách biết đang gửi
+      const btn = document.querySelector('.btn-submit');
+      btn.innerText = 'ĐANG GỬI THÔNG TIN...';
+      btn.disabled = true;
+
+      // Lấy thông tin khách điền
       const phone = document.getElementById('userPhone').value;
       const issue = document.getElementById('lockIssue').value;
       const address = document.getElementById('userAddress').value;
-      
-      alert('Đã gửi yêu cầu thành công! Thợ khóa Quang Huy sẽ liên hệ lại ngay theo số ' + phone);
-      // Chuyển hướng hoặc mở cuộc gọi nếu cần
-      window.location.href = 'tel:0855278627';
+
+      // DÁN ĐƯỜNG LINK WEBHOOK VÀO GIỮA 2 DẤU NGOẶC KÉP Ở DÒNG DƯỚI:
+      const webhookUrl = "https://hook.us2.make.com/mzcwycoijndbzlly0fykxnp7sjitv6y3"
+
+      // Đóng gói dữ liệu gửi đi
+      const data = {
+        phone: phone,
+        issue: issue,
+        address: address,
+        time: new Date().toLocaleString('vi-VN')
+      };
+
+      // Bắn dữ liệu sang Make.com
+      fetch(webhookUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(response => {
+        alert('Đã gửi yêu cầu thành công! Thợ khóa Quang Huy sẽ liên hệ lại ngay theo số ' + phone);
+        btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
+        btn.disabled = false;
+        e.target.reset();
+      })
+      .catch(error => {
+        alert('Mạng chậm, bạn vui lòng gọi trực tiếp Hotline nhé!');
+        btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
+        btn.disabled = false;
+      });
     }
   </script>
 </body>
