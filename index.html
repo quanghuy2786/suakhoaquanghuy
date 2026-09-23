@@ -132,7 +132,7 @@
       <h3>Lõi Khóa Ruột Đặc Chống Kẹt</h3>
       <p>Cung cấp lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa. Độ bền 2-5 năm, tự thay tại nhà tiết kiệm 80% chi phí.</p>
     </div>
-       <!-- ================= KHỐI BÁN HÀNG: LÕI KHÓA CHỐNG KẸT CHÈN THÊM ================= -->
+     <!-- ================= KHỐI BÁN HÀNG: LÕI KHÓA CHỐNG KẸT TỐI ƯU COD ================= -->
 <section class="product-sale-section" style="padding: 40px 20px; background: #fffcf5; text-align: center; font-family: Arial, sans-serif; width: 100%; box-sizing: border-box; border-top: 3px dashed var(--primary); border-bottom: 3px dashed var(--primary); margin: 30px 0;">
     
     <!-- Tiêu đề sản phẩm siêu nổi bật -->
@@ -143,7 +143,7 @@
     </p>
 
     <!-- Bảng giá combo cực hời kích thích mua nhiều -->
-    <div class="combo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 800px; margin: 0 auto 30px auto;">
+    <div class="combo-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; max-width: 800px; margin: 0 auto 15px auto;">
         <div style="background: #fff; padding: 10px; border: 1px solid #ffccd5; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); border-bottom: 3px solid #ff4757;">
             <span style="font-size: 12px; color: var(--gray); display:block;">Mua lẻ 1 bộ</span>
             <strong style="color: #d32f2f; font-size: 16px; display:block; margin-top: 3px;">90.000đ</strong>
@@ -168,6 +168,7 @@
             <strong style="color: #d32f2f; font-size: 16px; display:block; margin-top: 3px;">700.000đ</strong>
         </div>
     </div>
+    <p style="color: #ff4757; font-size: 13px; font-style: italic; margin: 0 auto 25px auto;">🚚 Phí chuyển phát nhanh COD toàn quốc đồng giá: 25.000đ</p>
 
     <!-- Form Đặt Hàng & Thanh Toán Tiện Lợi -->
     <div class="order-box" style="background: #ffffff; padding: 25px; border-radius: 8px; max-width: 600px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; border: 1px solid #eee;">
@@ -192,26 +193,37 @@
             <div style="margin-bottom: 15px;">
                 <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px; color: var(--dark);">Chọn số lượng muốn đặt mua (*):</label>
                 <select id="buyerQuantity" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: #fff; font-weight: bold; color: #d32f2f;">
-                    <option value="1 bộ - 90k">Mua lẻ 1 bộ — 90.000đ</option>
-                    <option value="2 bộ - 180k">Combo 2 bộ — 180.000đ</option>
-                    <option value="3 bộ - 260k">Combo 3 bộ — 260.000đ (Tiết kiệm)</option>
-                    <option value="5 bộ - 400k">Combo 5 bộ — 400.000đ (Giá HOT)</option>
-                    <option value="10 bộ - 700k">Combo 10 bộ — 700.000đ (Giá Sỉ cực rẻ)</option>
+                    <option value="1 bộ - Tổng 115k cả ship">Mua lẻ 1 bộ — 90.000đ (+25k ship = 115k)</option>
+                    <option value="2 bộ - Tổng 205k cả ship">Combo 2 bộ — 180.000đ (+25k ship = 205k)</option>
+                    <option value="3 bộ - Tổng 285k cả ship">Combo 3 bộ — 260.000đ (+25k ship = 285k)</option>
+                    <option value="5 bộ - Tổng 425k cả ship">Combo 5 bộ — 400.000đ (+25k ship = 425k)</option>
+                    <option value="10 bộ - Tổng 725k cả ship">Combo 10 bộ — 700.000đ (+25k ship = 725k)</option>
                 </select>
             </div>
 
-            <!-- Khối thông tin số tài khoản chuyển khoản ngân hàng -->
-            <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 15px; border-radius: 6px; margin: 20px 0; font-size: 14px;">
-                <strong style="color: var(--dark); display: block; margin-bottom: 8px; text-transform: uppercase; font-size: 13px; color: #2e7d32;">💳 THÔNG TIN THANH TOÁN (CHUYỂN KHOẢN):</strong>
-                <p style="margin: 4px 0; color: var(--dark);">🏦 Ngân hàng: <strong>[Vietcombank]</strong></p>
-                <p style="margin: 4px 0; color: var(--dark);">🔢 Số tài khoản: <strong style="color: #d32f2f; font-size: 16px;">[9855278627]</strong></p>
-                <p style="margin: 4px 0; color: var(--dark);">👤 Chủ tài khoản: <strong>[ĐINH CÔNG HUY]</strong></p>
-                <p style="margin: 8px 0 0 0; font-size: 12px; color: var(--gray); font-style: italic;">* Nội dung chuyển khoản: <span style="color:var(--dark); font-weight:bold;">[Họ tên] [Số điện thoại mua loi khoa]</span></p>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px; color: var(--dark);">Hình thức thanh toán (*):</label>
+                <div style="display: flex; gap: 15px; margin-top: 8px;">
+                    <label style="display: flex; align-items: center; gap: 5px; font-size: 14px; cursor: pointer;">
+                        <input type="radio" name="paymentMethod" value="COD" checked style="cursor: pointer;"> 📦 Nhận hàng trả tiền (COD)
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 5px; font-size: 14px; cursor: pointer;">
+                        <input type="radio" name="paymentMethod" value="Chuyển khoản" style="cursor: pointer;"> 💳 Chuyển khoản ngân hàng
+                    </label>
+                </div>
             </div>
 
-            <!-- Nút xác nhận mua hàng siêu to, kích thích hành động -->
+            <!-- Khối thông tin số tài khoản ngân hàng (Hiển thị song song/dự phòng gọn gàng) -->
+            <div style="background: #f9f9f9; border: 1px dashed #ccc; padding: 12px; border-radius: 6px; margin: 15px 0; font-size: 13px;">
+                <strong style="color: #2e7d32; display: block; margin-bottom: 5px; text-transform: uppercase; font-size: 12px;">💳 TK NGÂN HÀNG (Nếu chọn chuyển khoản trước):</strong>
+                <p style="margin: 3px 0; color: var(--dark);">🏦 Ngân hàng: <strong>[Tên Ngân Hàng của anh]</strong></p>
+                <p style="margin: 3px 0; color: var(--dark);">🔢 Số tài khoản: <strong style="color: #d32f2f;">[Điền STK của anh vào đây]</strong></p>
+                <p style="margin: 3px 0; color: var(--dark);">👤 Chủ tài khoản: <strong>[Tên đầy đủ của anh]</strong></p>
+            </div>
+
+            <!-- Nút xác nhận mua hàng siêu to -->
             <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 14px; border-radius: 4px; font-weight: bold; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3); transition: 0.3s;">
-                🚀 ĐẶT HÀNG NGAY — NHẬN HÀNG KIỂM TRA MỚI THANH TOÁN
+                🚀 ĐẶT HÀNG NGAY — KIỂM TRA OK MỚI THANH TOÁN
             </button>
         </form>
     </div>
