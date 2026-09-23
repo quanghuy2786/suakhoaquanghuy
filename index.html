@@ -289,6 +289,12 @@
           </optgroup>
         </select>
       </div>
+                         <!-- Ô nhập vấn đề khác cho khách tự viết tay chèn thêm -->
+                <div class="form-group" style="margin-bottom: 15px; text-align: left;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 5px; color: var(--dark);">Nếu là vấn đề khác, vui lòng nhập vào đây:</label>
+                    <input type="text" id="userCustomIssue" placeholder="Ví dụ: Kẹt khóa tủ, mất chìa khóa két sắt..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: Arial, sans-serif;">
+                </div>
+
       <div class="form-group">
                            <label>Địa chỉ tại Lào Cai:</label>
                     <input type="text" id="userAddress" placeholder="Ví dụ: Cốc Lếu, Kim Tân, Bảo Thắng..." required>
@@ -365,6 +371,7 @@
       // Lấy thông tin khách điền
       const phone = document.getElementById('userPhone').value;
       const issue = document.getElementById('lockIssue').value;
+      const customIssue = document.getElementById('userCustomIssue').value;
       const address = document.getElementById('userAddress').value;
 
       // DÁN ĐƯỜNG LINK WEBHOOK VÀO GIỮA 2 DẤU NGOẶC KÉP Ở DÒNG DƯỚI:
