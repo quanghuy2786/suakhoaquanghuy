@@ -521,12 +521,12 @@ document.getElementById('productOrderForm').addEventListener('submit', function(
     const buyerQuantity = document.getElementById('buyerQuantity').value;
     const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
     const orderTime = new Date().toLocaleString('vi-VN');
-
-    // 2. Tạo một Form ảo để gửi dữ liệu đi, tránh bị Make chặn bảo mật CORS
+       // 2. Cấu hình Form ảo gửi dữ liệu vào khung ẩn để KHÔNG bị nhảy trang
     const form = document.createElement('form');
     form.method = 'POST';
-        form.action = 'https://make.com'; 
-    form.target = '_self'; 
+    form.action = 'https://make.com'; // Link Webhook chuẩn của anh
+    form.target = 'hidden_iframe'; // Đẩy kết quả trả về vào khung ẩn để chặn nhảy trang
+
     // 3. Đóng gói dữ liệu vào Form
     const fields = {
         "formType": "Đơn hàng Lõi Khóa Chống Kẹt",
@@ -548,10 +548,11 @@ document.getElementById('productOrderForm').addEventListener('submit', function(
         }
     }
 
-    // 4. Thực hiện gửi đơn hàng
+    // 4. Thực hiện gửi đơn hàng ngầm
     document.body.appendChild(form);
     form.submit();
     document.body.removeChild(form);
+
 
     // 5. Hiện thông báo đặt hàng thành công ngay trên màn hình cho khách yên tâm
     alert('🎉 Đặt hàng thành công! Cảm ơn anh/chị ' + buyerName + ' đã ủng hộ thợ khóa Quang Huy. SĐT ' + buyerPhone + ' chúng tôi sẽ xác nhận đơn hàng và gửi ship COD ngay ạ!');
