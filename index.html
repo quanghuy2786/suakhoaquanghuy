@@ -525,9 +525,8 @@ document.getElementById('productOrderForm').addEventListener('submit', function(
     // 2. Tạo một Form ảo để gửi dữ liệu đi, tránh bị Make chặn bảo mật CORS
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://make.com'; // Giữ nguyên link Webhook của anh
-    form.target = '_blank'; // Mở tab ẩn để xử lý dữ liệu gửi đi
-
+        form.action = 'https://make.com'; 
+    form.target = '_self'; 
     // 3. Đóng gói dữ liệu vào Form
     const fields = {
         "formType": "Đơn hàng Lõi Khóa Chống Kẹt",
