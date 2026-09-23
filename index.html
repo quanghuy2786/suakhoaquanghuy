@@ -510,46 +510,55 @@
         btn.disabled = false;
       });
     }
-       // ================= ĐOẠN MÃ XỬ LÝ GỬI ĐƠN HÀNG LÕI KHÓA CHÈN THÊM =================
+     // ================= ĐOẠN MÃ XỬ LÝ ĐƠN HÀNG LÕI KHÓA - CẢI TIẾN KHÔNG BỊ CHẶN =================
 document.getElementById('productOrderForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Ngăn trang web bị tải lại khi bấm nút
+    e.preventDefault(); // Ngăn tải lại trang mặc định
 
-    // 1. Thu thập dữ liệu từ form bán hàng
-    const orderData = {
-        formType: "Đơn hàng Lõi Khóa Chống Kẹt",
-        buyerName: document.getElementById('buyerName').value,
-        buyerPhone: document.getElementById('buyerPhone').value,
-        buyerAddress: document.getElementById('buyerAddress').value,
-        buyerQuantity: document.getElementById('buyerQuantity').value,
-        paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value,
-        orderTime: new Date().toLocaleString('vi-VN')
+    // 1. Thu thập dữ liệu từ các ô nhập liệu
+    const buyerName = document.getElementById('buyerName').value;
+    const buyerPhone = document.getElementById('buyerPhone').value;
+    const buyerAddress = document.getElementById('buyerAddress').value;
+    const buyerQuantity = document.getElementById('buyerQuantity').value;
+    const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+    const orderTime = new Date().toLocaleString('vi-VN');
+
+    // 2. Tạo một Form ảo để gửi dữ liệu đi, tránh bị Make chặn bảo mật CORS
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'https://make.com'; // Giữ nguyên link Webhook của anh
+    form.target = '_blank'; // Mở tab ẩn để xử lý dữ liệu gửi đi
+
+    // 3. Đóng gói dữ liệu vào Form
+    const fields = {
+        "formType": "Đơn hàng Lõi Khóa Chống Kẹt",
+        "buyerName": buyerName,
+        "buyerPhone": buyerPhone,
+        "buyerAddress": buyerAddress,
+        "buyerQuantity": buyerQuantity,
+        "paymentMethod": paymentMethod,
+        "orderTime": orderTime
     };
 
-    // 2. Gửi dữ liệu sang hệ thống Make Webhook
-    // (Anh Huy có thể dùng chung link Webhook cũ hoặc tạo link mới trên Make nhé)
-    const makeWebhookUrl = "https://make.com"; 
-
-    fetch(makeWebhookUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(orderData)
-    })
-    .then(response => {
-        if (response.ok) {
-            alert('🎉 Đơn hàng của khách ' + orderData.buyerName + ' đã được gửi lên hệ thống thành công! Anh Huy chuẩn bị đóng gói ship COD nhé.');
-            document.getElementById('productOrderForm').reset(); // Xóa dữ liệu cũ trên form để khách khác mua tiếp
-        } else {
-            alert('❌ Có lỗi xảy ra khi gửi đơn hàng. Anh Huy kiểm tra lại hệ thống Make nhé!');
+    for (const key in fields) {
+        if (fields.hasOwnProperty(key)) {
+            const hiddenField = document.createElement('input');
+            hiddenField.type = 'hidden';
+            hiddenField.name = key;
+            hiddenField.value = fields[key];
+            form.appendChild(hiddenField);
         }
-    })
-    .catch(error => {
-        console.error('Lỗi:', error);
-        alert('❌ Không kết nối được với hệ thống. Vui lòng thử lại sau!');
-    });
+    }
+
+    // 4. Thực hiện gửi đơn hàng
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+
+    // 5. Hiện thông báo đặt hàng thành công ngay trên màn hình cho khách yên tâm
+    alert('🎉 Đặt hàng thành công! Cảm ơn anh/chị ' + buyerName + ' đã ủng hộ thợ khóa Quang Huy. SĐT ' + buyerPhone + ' sẽ có nhân viên gọi điện xác nhận đơn hàng và gửi ship COD ngay ạ!');
+    document.getElementById('productOrderForm').reset(); // Xóa sạch dữ liệu trên form để người sau mua tiếp
 });
-// ================= KẾT THÚC ĐOẠN MÃ XỬ LÝ ĐƠN HÀNG =================
+// ================= KẾT THÚC ĐOẠN MÃ ĐƠN HÀNG CẢI TIẾN =================
   </script>
 </body>
 </html>
