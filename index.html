@@ -510,6 +510,46 @@
         btn.disabled = false;
       });
     }
+       // ================= ĐOẠN MÃ XỬ LÝ GỬI ĐƠN HÀNG LÕI KHÓA CHÈN THÊM =================
+document.getElementById('productOrderForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngăn trang web bị tải lại khi bấm nút
+
+    // 1. Thu thập dữ liệu từ form bán hàng
+    const orderData = {
+        formType: "Đơn hàng Lõi Khóa Chống Kẹt",
+        buyerName: document.getElementById('buyerName').value,
+        buyerPhone: document.getElementById('buyerPhone').value,
+        buyerAddress: document.getElementById('buyerAddress').value,
+        buyerQuantity: document.getElementById('buyerQuantity').value,
+        paymentMethod: document.querySelector('input[name="paymentMethod"]:checked').value,
+        orderTime: new Date().toLocaleString('vi-VN')
+    };
+
+    // 2. Gửi dữ liệu sang hệ thống Make Webhook
+    // (Anh Huy có thể dùng chung link Webhook cũ hoặc tạo link mới trên Make nhé)
+    const makeWebhookUrl = "https://make.com"; 
+
+    fetch(makeWebhookUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(orderData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('🎉 Đơn hàng của khách ' + orderData.buyerName + ' đã được gửi lên hệ thống thành công! Anh Huy chuẩn bị đóng gói ship COD nhé.');
+            document.getElementById('productOrderForm').reset(); // Xóa dữ liệu cũ trên form để khách khác mua tiếp
+        } else {
+            alert('❌ Có lỗi xảy ra khi gửi đơn hàng. Anh Huy kiểm tra lại hệ thống Make nhé!');
+        }
+    })
+    .catch(error => {
+        console.error('Lỗi:', error);
+        alert('❌ Không kết nối được với hệ thống. Vui lòng thử lại sau!');
+    });
+});
+// ================= KẾT THÚC ĐOẠN MÃ XỬ LÝ ĐƠN HÀNG =================
   </script>
 </body>
 </html>
