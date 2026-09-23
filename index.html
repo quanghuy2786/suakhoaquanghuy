@@ -413,7 +413,127 @@
       <button type="submit" class="btn-submit">YÊU CẦU THỢ GỌI LẠI NGAY</button>
     </form>
   </div>
+<style>
+  .faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 15px;
+    font-family: Arial, sans-serif;
+  }
+  .faq-title {
+    text-align: center;
+    color: #0b2239; /* Xanh sẫm giống màu banner */
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .faq-item {
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .faq-item summary {
+    background-color: #f8f9fa;
+    padding: 16px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    list-style: none;
+    position: relative;
+    transition: background-color 0.2s;
+  }
+  /* Ẩn mũi tên mặc định của trình duyệt */
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+  /* Tạo mũi tên tùy chỉnh */
+  .faq-item summary::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #d4af37; /* Màu vàng Gold */
+    transition: transform 0.3s ease;
+  }
+  /* Hiệu ứng xoay mũi tên khi mở */
+  .faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .faq-item summary:hover {
+    background-color: #e9ecef;
+    color: #0b2239;
+  }
+  .faq-item p {
+    padding: 16px 20px;
+    margin: 0;
+    color: #444;
+    line-height: 1.6;
+    border-top: 1px solid #eee;
+    font-size: 15px;
+  }
+</style>
 
+<div class="faq-container">
+  <h2 class="faq-title">Câu Hỏi Thường Gặp Về Dịch Vụ</h2>
+  
+  <details class="faq-item">
+    <summary>1. Gọi thợ đến sửa khóa thì bao lâu sẽ có mặt?</summary>
+    <p>Tại khu vực Lào Cai và các phường lân cận, thợ khóa Quang Huy sẽ di chuyển ngay lập tức sau khi tiếp nhận cuộc gọi. Thời gian có mặt trung bình chỉ từ <strong>15 - 30 phút</strong> tùy khoảng cách giao thông, giúp bạn không phải chờ đợi lâu làm lỡ dở công việc.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>2. Mở khóa ô tô, khóa nhà có làm xước sơn hay hỏng ổ không?</summary>
+    <p><strong>Cam kết 100% không cạy phá.</strong> Chúng tôi sử dụng các công cụ mở khóa chuyên dụng (tool Lishi, cây mở kỹ thuật) để thao tác trực tiếp qua khe bi mượt mà như dùng chìa khóa gốc. Cửa xe, cửa nhà sẽ được mở an toàn, không xước sơn, không móp méo và ổ khóa vẫn sử dụng lại bình thường.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>3. Rơi mất toàn bộ Smartkey xe máy, có làm lại được không?</summary>
+    <p><strong>Hoàn toàn làm lại được mà không cần thay ổ mới.</strong> Thợ khóa được trang bị máy móc chuyên sâu để kết nối và đọc lại mã ID gốc từ hộp điều khiển của xe (Honda, Yamaha, Vespa...). Sau đó sẽ cấp lại mã và đồng bộ với chìa Smartkey mới ngay tại chỗ. Chi phí rẻ hơn rất nhiều so với việc vào hãng thay toàn bộ hệ thống.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>4. Dịch vụ báo giá như thế nào? Gọi đến xem có mất tiền không?</summary>
+    <p>Uy tín tạo nên thương hiệu. Sửa Khóa Quang Huy luôn áp dụng quy trình: <strong>Nghe tình trạng -> Báo giá chuẩn xác -> Khách đồng ý mới làm.</strong> Nếu báo giá xong mà khách hàng thấy không phù hợp, chúng tôi vui vẻ ra về và bạn không mất bất kỳ một khoản phí nào.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>5. Thợ khóa có giữ lại bản sao chìa khóa hay mã Smartkey của tôi không?</summary>
+    <p><strong>Tuyệt đối không.</strong> Đạo đức nghề nghiệp là nguyên tắc sống còn của chúng tôi. Với chìa cơ, bàn giao toàn bộ chìa cắt mới. Với Smartkey, máy móc thiết lập xong sẽ tự động xóa dữ liệu. Thợ cũng sẽ hướng dẫn bạn cách xóa mã chìa cũ bị mất để kẻ gian nhặt được cũng không mở được xe.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>6. Mở két sắt mất chìa, quên mã có phải khoan đục phanh két ra không?</summary>
+    <p>Với kinh nghiệm chuyên sâu, chúng tôi ưu tiên dò mã số và mở ổ khóa bằng kỹ thuật. Chỉ trong những trường hợp cực kỳ hy hữu (hộp số bị kẹt vỡ hỏng nặng từ trước), thợ mới phải dùng đến phương án khoan một lỗ rất nhỏ bằng đầu đũa, sau đó sẽ trám thẩm mỹ lại như mới.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>7. Thời gian hỗ trợ ngoài giờ ra sao? Có bị chém giá không?</summary>
+    <p>Chúng tôi có đội ngũ hỗ trợ kỹ thuật linh hoạt các ngày trong tuần, kể cả ngoài giờ hành chính. Chi phí luôn được báo minh bạch và chốt rõ ràng trước khi thợ xuất phát, tuyệt đối không có tình trạng đến nơi mới viện cớ vòi vĩnh hay tăng giá.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>8. Chìa khóa đánh mới hoặc thay ổ khóa có được bảo hành không?</summary>
+    <p>Có. Tất cả các dịch vụ (làm lại chìa, thay ổ khóa mới, thay pin, thay vỏ Smartkey) đều có chế độ bảo hành rõ ràng từ 6 tháng đến 2 năm tùy linh kiện. Nếu có lỗi do nhà sản xuất hoặc lỗi kỹ thuật, chúng tôi sẽ hỗ trợ tận tình.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>9. Khóa trái cửa ở ngoài, gọi thợ mở có cần chứng minh giấy tờ không?</summary>
+    <p>Để đảm bảo an ninh trật tự, đối với các trường hợp mở khóa két sắt, nhà riêng hoặc xe máy ban đêm/khu vực vắng, thợ khóa có thể sẽ yêu cầu bạn xác nhận thông tin cơ bản (ví dụ: chứng minh thư khớp với thông tin hàng xóm, hoặc giấy tờ xe) trước khi tiến hành mở khóa.</p>
+  </details>
+
+  <details class="faq-item">
+    <summary>10. Gọi Quang Huy là thợ trực tiếp làm hay qua trung gian? Có đội giá không?</summary>
+    <p>Chúng tôi sở hữu <strong>đội ngũ thợ khóa trực tiếp</strong> của cửa hàng, hoàn toàn không qua tổng đài trung gian hay "cò" mồi bán khách. Vì vậy, mức giá luôn đảm bảo bình dân và hợp lý nhất thị trường. Thực tế hỏng gì, làm như thế nào thì báo đúng giá như vậy. Tuyệt đối không vẽ thêm bệnh hay kê cao giá để ăn hoa hồng. Khách hàng hoàn toàn yên tâm vì được làm việc với thợ thực chiến, tối ưu chi phí và bảo hành tận gốc.</p>
+  </details>
+
+</div>
   <footer>
     <p><strong>Cơ sở Sửa Khóa Quang Huy Lào Cai</strong></p>
     <p>Hotline phục vụ 24/7: 0855.27.86.27</p>
