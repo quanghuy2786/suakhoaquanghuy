@@ -238,6 +238,44 @@
   </div>
 
   <script>
+   <!-- ================= NÚT GỌI ĐIỆN LẮC LƯ DI ĐỘNG CHÈN THÊM ================= -->
+<style>
+@keyframes quick-call-shake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    2% { transform: translate(2px, 1px) rotate(1deg); }
+    4% { transform: translate(1px, -1px) rotate(-2deg); }
+    6% { transform: translate(-3px, 1px) rotate(0deg); }
+    8% { transform: translate(0px, 2px) rotate(-1deg); }
+    10% { transform: translate(-1px, -2px) rotate(1deg); }
+    12% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+.btn-call-fixed {
+    position: fixed;
+    bottom: 90px; /* Đẩy lên cao hơn thanh sticky bar cũ của anh để không bị đè lên nhau */
+    right: 20px;
+    background: #ff4757;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    animation: quick-call-shake 2s infinite;
+    font-family: Arial, sans-serif;
+}
+</style>
+
+<a href="tel:0855278627" class="btn-call-fixed">
+   📞 GỌI THỢ NGAY (0855.27.86.27)
+</a>
+<!-- ================= KẾT THÚC NÚT GỌI ĐIỆN LẮC LƯ ================= -->
+
     function handleFormSubmit(e) {
       e.preventDefault();
 
