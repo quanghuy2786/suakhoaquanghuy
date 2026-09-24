@@ -737,6 +737,12 @@
           btn.disabled = false;
       });
     });
+           // Tự động ép khung nhận đúng đường dẫn nhúng chuẩn YouTube của anh Huy khi tải trang
+    const videoFrame = document.querySelector(".video-wrapper iframe");
+    if (videoFrame) {
+        videoFrame.src = "https://youtube.com";
+    }
+       
   </script>
 </body>
 </html>
