@@ -133,66 +133,41 @@
       <p>Cung cấp lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa. Độ bền 2-5 năm, tự thay tại nhà tiết kiệm 80% chi phí.</p>
     </div>
     </div>
+     <!-- ================= KHỐI ĐẶT MUA LÕI KHÓA ĐƠN GIẢN NGUYÊN BẢN ================= -->
+<section style="padding: 30px 20px; background: #fffcf5; text-align: center; font-family: Arial, sans-serif; border-top: 2px dashed #d32f2f; border-bottom: 2px dashed #d32f2f; margin: 20px 0;">
+    <h3 style="color: #d32f2f; margin-top: 0;">⚙️ ĐẶT MUA LÕI KHÓA RUỘT ĐẶC CHỐNG KẸT</h3>
+    <p style="font-size: 14px; max-width: 600px; margin: 0 auto 15px auto;">Giá sỉ lẻ toàn quốc: 1 bộ 90k | 2 bộ 180k | 3 bộ 260k | 5 bộ 400k. Phí ship COD đồng giá 25k, nhận hàng kiểm tra mới thanh toán!</p>
+    
+    <div style="max-width: 500px; margin: 0 auto; text-align: left; background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border: 1px solid #eee;">
+        <form id="productOrderForm">
+            <div style="margin-bottom: 10px;">
+                <label style="display:block; font-weight:bold; margin-bottom: 3px; font-size: 13px;">Họ tên người nhận:</label>
+                <input type="text" id="buyerName" required style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
             </div>
-            <p style="margin: 0; font-size: 12px; color: var(--gray); text-align: center; font-style: italic; font-family: Arial, sans-serif;">(Bấm vào hình ảnh để xem kích thước lớn hơn)</p>
-        </div>
-
-        <!-- CỘT BÊN PHẢI: BẢNG GIÁ & FORM ĐẶT HÀNG NHANH -->
-        <div class="product-form-col" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); text-align: left; border: 1px solid #eee;">
-            <h3 style="margin-top: 0; color: var(--dark); text-align: center; font-size: 17px; margin-bottom: 15px; border-bottom: 2px solid var(--light); padding-bottom: 8px; text-transform: uppercase;">🛒 Đăng Ký Đặt Hàng COD Toàn Quốc</h3>
-            
-            <!-- Danh sách giá combo gọn gàng -->
-            <div style="background: #fffcf5; padding: 10px; border-radius: 6px; border: 1px solid #ffeaa7; margin-bottom: 15px; font-size: 13px; line-height: 1.6;">
-                💰 <b>Giá đã gồm phí Ship COD 25k tận nơi:</b><br>
-                • Mua lẻ 1 bộ: <b style="color: #d32f2f;">115.000đ</b> | • Combo 2 bộ: <b style="color: #d32f2f;">205.000đ</b><br>
-                • Combo 3 bộ: <b style="color: #d32f2f;">285.000đ</b> | • Combo 5 bộ: <b style="color: #d32f2f;">425.000đ</b>
+            <div style="margin-bottom: 10px;">
+                <label style="display:block; font-weight:bold; margin-bottom: 3px; font-size: 13px;">Số điện thoại:</label>
+                <input type="tel" id="buyerPhone" required style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
             </div>
-
-            <form id="productOrderForm">
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Họ và tên người nhận (*):</label>
-                    <input type="text" id="buyerName" placeholder="Nhập tên của bạn" required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Số điện thoại liên hệ (*):</label>
-                    <input type="tel" id="buyerPhone" placeholder="Nhập số điện thoại giao hàng" required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Địa chỉ nhận hàng toàn quốc (*):</label>
-                    <input type="text" id="buyerAddress" placeholder="Ghi rõ Số nhà, Tên đường, Thôn/Xã, Huyện, Tỉnh..." required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Chọn số lượng đặt mua:</label>
-                    <select id="buyerQuantity" style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: #fff; font-weight: bold; color: #d32f2f; cursor: pointer;">
-                        <option value="1 bộ - 115k cả ship">Mua lẻ 1 bộ — 115.000đ</option>
-                        <option value="2 bộ - 205k cả ship">Combo 2 bộ — 205.000đ</option>
-                        <option value="3 bộ - 285k cả ship">Combo 3 bộ — 285.000đ</option>
-                        <option value="5 bộ - 425k cả ship">Combo 5 bộ — 425.000đ</option>
-                        <option value="10 bộ - 725k cả ship">Combo 10 bộ — 725.000đ</option>
-                    </select>
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Hình thức thanh toán (*):</label>
-                    <div style="display: flex; gap: 15px; margin-top: 5px;">
-                        <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; cursor: pointer; color: var(--dark);">
-                            <input type="radio" name="paymentMethod" value="COD" checked style="cursor: pointer;"> 📦 Giao hàng COD toàn quốc
-                        </label>
-                    </div>
-                </div>
-
-                <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; font-size: 15px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2); transition: 0.3s;">
-                    🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
-                </button>
-            </form>
-        </div>
-
+            <div style="margin-bottom: 10px;">
+                <label style="display:block; font-weight:bold; margin-bottom: 3px; font-size: 13px;">Địa chỉ nhận hàng:</label>
+                <input type="text" id="buyerAddress" required style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+            </div>
+            <div style="margin-bottom: 12px;">
+                <label style="display:block; font-weight:bold; margin-bottom: 3px; font-size: 13px;">Số lượng đặt mua:</label>
+                <select id="buyerQuantity" style="width:100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-weight:bold; color:#d32f2f;">
+                    <option value="1 bộ - 115k cả ship">Mua lẻ 1 bộ — 115.000đ (Đã gồm ship)</option>
+                    <option value="2 bộ - 205k cả ship">Combo 2 bộ — 205.000đ (Đã gồm ship)</option>
+                    <option value="3 bộ - 285k cả ship">Combo 3 bộ — 285.000đ (Đã gồm ship)</option>
+                    <option value="5 bộ - 425k cả ship">Combo 5 bộ — 425.000đ (Đã gồm ship)</option>
+                </select>
+            </div>
+            <input type="hidden" name="paymentMethod" value="COD">
+            <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer; text-transform: uppercase;">🚀 XÁC NHẬN ĐẶT HÀNG NGAY</button>
+        </form>
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
     </div>
 </section>
-<!-- ================= KẾT THÚC KHỐI BÁN HÀNG ================= -->
+
         <!-- ================= BẮT ĐẦU KHỐI BẢNG GIÁ CHÈN THÊM ================= -->
         <section class="price-section" style="padding: 40px 20px; background: var(--light); text-align: center; width: 100%; box-sizing: border-box;">
             <h2 style="color: var(--primary); font-size: 22px; text-transform: uppercase; margin-bottom: 5px; font-weight: bold;">💰 Bảng Giá Dịch Vụ Sửa Khóa</h2>
