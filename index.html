@@ -742,7 +742,7 @@
           body: JSON.stringify(data)
       })
       .then(response => {
-          alert('🎉 Đặt hàng thành công! Cảm ơn ' + buyerName + '. Quang Huy sẽ gọi lại ' + buyerPhone + ' để chốt đơn ship COD!');
+          alert('🎉 Đặt hàng thành công! Cảm ơn ' + buyerName + '. Chúng tôi sẽ xác nhận ' + buyerPhone + ' và gửi đơn đặt hàng thông qua ship COD!');
           btn.innerText = originalText;
           btn.disabled = false;
           e.target.reset(); 
