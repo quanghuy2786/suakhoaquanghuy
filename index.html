@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-     <!-- ================= TỐI ƯU HIỂN THỊ TRÊN ZALO, FACEBOOK & GOOGLE ================= -->
+    <!-- ================= TỐI ƯU HIỂN THỊ TRÊN ZALO, FACEBOOK & GOOGLE ================= -->
     <title>Sửa Khóa Quang Huy Lào Cai - Cứu Hộ Khóa Tận Nơi 24/7</title>
     <meta name="description" content="Thợ sửa khóa Quang Huy tại Lào Cai chuyên mở khóa ô tô, xe máy, khóa nhà, két sắt cấp tốc. Có mặt sau 15 phút, giá công khai minh bạch, phục vụ chuyên nghiệp 24/7.">
     <meta name="keywords" content="sửa khóa lào cai, thợ sửa khóa lào cai, mở khóa ô tô lào cai, đánh chìa xe máy lào cai, sửa khóa tại nhà lào cai, sửa khóa quang huy">
@@ -17,704 +17,202 @@
     <link rel="icon" type="image/png" href="https://github.io">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ================= KẾT THÚC KHỐI TỐI ƯU SEO ================= -->
-  <style>
-    :root {
-      --primary: #d32f2f;
-      --primary-dark: #b71c1c;
-      --secondary: #ffb300;
-      --dark: #1e293b;
-      --light: #f8fafc;
-      --gray: #64748b;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-    body { background-color: var(--light); color: var(--dark); line-height: 1.6; padding-bottom: 70px; }
     
-    /* Header */
-    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
-    .top-bar { background: var(--primary); color: #fff; text-align: center; padding: 6px 12px; font-size: 13px; font-weight: bold; }
-    .nav-container { max-width: 1100px; margin: auto; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 20px; font-weight: 900; color: var(--primary); text-transform: uppercase; text-decoration: none; }
-    .btn-header { background: var(--primary); color: #fff; padding: 8px 16px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 14px; }
-
-    /* Hero */
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; padding: 45px 20px; text-align: center; }
-    .hero h1 { font-size: 26px; color: var(--secondary); margin-bottom: 12px; line-height: 1.3; }
-    .hero p { font-size: 15px; color: #cbd5e1; max-width: 600px; margin: 0 auto 25px auto; }
-    .btn-call-hero { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: linear-gradient(45deg, #d32f2f, #ff5252); color: #fff; font-size: 18px; font-weight: 800; padding: 14px 28px; border-radius: 50px; text-decoration: none; box-shadow: 0 4px 20px rgba(211,47,47,0.5); animation: pulse 1.8s infinite; }
-    
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.04); }
-      100% { transform: scale(1); }
-    }
-
-    /* Badges */
-    .badges { display: flex; justify-content: center; gap: 12px; margin-top: 25px; flex-wrap: wrap; }
-    .badge-item { background: rgba(255,255,255,0.1); padding: 8px 14px; border-radius: 8px; font-size: 13px; border: 1px solid rgba(255,255,255,0.15); }
-
-    /* Services */
-    .section-title { text-align: center; margin: 40px 20px 20px 20px; font-size: 22px; font-weight: 800; color: var(--dark); }
-    .services-grid { max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 18px; padding: 0 20px; }
-    .service-card { background: #fff; border-radius: 12px; padding: 22px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; transition: transform 0.2s; }
-    .service-card:hover { transform: translateY(-4px); }
-    .service-icon { font-size: 32px; margin-bottom: 12px; display: block; }
-    .service-card h3 { font-size: 17px; margin-bottom: 8px; color: var(--primary); }
-    .service-card p { font-size: 14px; color: var(--gray); line-height: 1.5; }
-
-    /* Commitments */
-    .commit-box { background: #fff; max-width: 1060px; margin: 35px 20px; padding: 25px; border-radius: 12px; border-left: 5px solid var(--primary); box-shadow: 0 4px 15px rgba(0,0,0,0.04); }
-    .commit-box h3 { font-size: 18px; margin-bottom: 12px; }
-    .commit-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
-    .commit-list li { font-size: 14px; display: flex; align-items: center; gap: 8px; font-weight: 600; }
-
-    /* Quick Booking Form */
-    .form-container { max-width: 500px; margin: 30px auto; background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-    .form-container h3 { text-align: center; margin-bottom: 15px; color: var(--primary); }
-    .form-group { margin-bottom: 12px; }
-    .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
-    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; outline: none; }
-    .btn-submit { width: 100%; background: var(--primary); color: #fff; padding: 12px; border: none; border-radius: 6px; font-weight: bold; font-size: 15px; cursor: pointer; }
-
-    /* Sticky Footer Buttons */
-    .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; display: flex; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 999; }
-    .btn-sticky { flex: 1; text-align: center; padding: 14px; text-decoration: none; font-weight: 800; font-size: 15px; display: flex; align-items: center; justify-content: center; gap: 8px; }
-    .btn-sticky-zalo { background: #0288d1; color: #fff; }
-    .btn-sticky-call { background: var(--primary); color: #fff; }
-
-    /* Footer */
-    footer { text-align: center; padding: 30px 20px; font-size: 13px; color: var(--gray); }
-  </style>
+    <style>
+        :root {
+            --primary: #d32f2f;
+            --dark: #1a1a1a;
+            --light: #f5f5f5;
+            --gray: #666;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: var(--dark);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .hotline-btn {
+            background-color: var(--primary);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 6px rgba(211, 47, 47, 0.2);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://github.io') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            margin: 0 0 20px 0;
+            font-size: 32px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .services {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .services h2 {
+            color: var(--primary);
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        .form-section {
+            background-color: var(--light);
+            padding: 5px 20px 40px 20px;
+            text-align: center;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .btn-submit {
+            background-color: #2e7d32;
+            color: #fff;
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2);
+        }
+        footer {
+            background-color: var(--dark);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 26px; }
+            .hero p { font-size: 16px; }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="top-bar">🚨 CỨU HỘ KHÓA KHẨN CẤP 24/7 - CÓ MẶT SAU 15-30 PHÚT TẠI LÀO CAI</div>
-
-  <header>
-    <div class="nav-container">
-      <a href="#" class="logo">Sửa Khóa Quang Huy</a>
-      <a href="tel:0855278627" class="btn-header">📞 0855.27.86.27</a>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>KẸT KHÓA? QUÊN CHÌA?<br>GỌI CÓ MẶT NGAY 24/7</h1>
-    <p>Chuyên cứu hộ khóa ô tô, lập trình Smartkey xe máy, mở khóa két sắt, cửa cuốn toàn khu vực Lào Cai. Thao tác chuẩn nghề, an toàn tuyệt đối 100% bảo mật.</p>
-    <a href="tel:0855278627" class="btn-call-hero">
-      <span>📞</span> GỌI THỢ NGAY: 0855.27.86.27
-    </a>
-    <div class="badges">
-      <div class="badge-item">⚡ 15-30 Phút Có Mặt</div>
-      <div class="badge-item">🛡 Không Xước Sơn Ô Tô</div>
-      <div class="badge-item">💰 Báo Giá Chuẩn Trước Khi Làm</div>
-    </div>
-  </section>
-
-  <h2 class="section-title">DỊCH VỤ CHUYÊN NGHIỆP TẬN NƠI</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <span class="service-icon">🚗</span>
-      <h3>Khóa Ô Tô Cao Cấp</h3>
-      <p>Mở khóa cửa, cốp ô tô khi quên chìa hoặc xe hết bình bằng cây mở chuyên dụng. Lập trình làm thêm chìa remote, Smartkey mọi dòng xe.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🛵</span>
-      <h3>Smartkey Xe Máy</h3>
-      <p>Làm lại chìa khóa thông minh, cấp lại mã ID các dòng xe Honda, Yamaha (SH, Lead, Airblade, Vision, Vario...) khi mất hết chìa phụ.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">🔐</span>
-      <h3>Két Sắt & Khóa Cửa</h3>
-      <p>Xử lý két sắt quên mật mã, kẹt bi, mất chìa. Sửa chữa và thay thế khóa cửa tay gạt, khóa cửa cuốn gia đình an toàn tuyệt đối.</p>
-    </div>
-    <div class="service-card">
-      <span class="service-icon">⚙️</span>
-      <h3>Lõi Khóa Ruột Đặc Chống Kẹt</h3>
-      <p>Cung cấp lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa. Độ bền 2-5 năm, tự thay tại nhà tiết kiệm 80% chi phí.</p>
-    </div>
-  </div>
-     <!-- ================= KHỐI BÁN HÀNG 2 CỘT CHUẨN ĐẸP TRÊN MÁY TÍNH & ĐIỆN THOẠI ================= -->
-<!-- ================= KHỐI BÁN HÀNG TÍCH HỢP ẢNH & VIDEO SẢN PHẨM ================= -->
-<section class="product-sale-section" style="padding: 40px 20px; background: #fffcf5; width: 100%; box-sizing: border-box; border-top: 3px dashed var(--primary); border-bottom: 3px dashed var(--primary); margin: 30px 0; font-family: Arial, sans-serif;">
-    
-    <!-- Tiêu đề tổng -->
-    <div style="text-align: center; margin-bottom: 30px;">
-        <div style="background: var(--primary); color: white; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 4px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">🔥 SẢN PHẨM CHUYÊN DỤNG TỰ THAY TẠI NHÀ</div>
-        <h2 style="color: #d32f2f; font-size: 24px; text-transform: uppercase; margin: 0 0 5px 0; font-weight: bold;">⚙️ LÕI KHÓA RUỘT ĐẶC CHỐNG KẸT CAO CẤP</h2>
-        <p style="color: var(--dark); font-size: 14px; max-width: 700px; margin: 0 auto; line-height: 1.5;">Lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa, đinh ốc đầy đủ. Tự thay thế tại nhà chỉ mất 3 phút!</p>
-    </div>
-    <!-- Chia 2 cột cân đối -->
-    <div class="product-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; align-items: start;">
-        </div>
-        <!-- CỘT BÊN PHẢI: BẢNG GIÁ & FORM ĐẶT HÀNG NHANH -->
-        <div class="product-form-col" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); text-align: left; border: 1px solid #eee;">
-            <h3 style="margin-top: 0; color: var(--dark); text-align: center; font-size: 17px; margin-bottom: 15px; border-bottom: 2px solid var(--light); padding-bottom: 8px; text-transform: uppercase;">🛒 Đăng Ký Đặt Hàng COD Toàn Quốc</h3>
-            
-            <!-- Danh sách giá combo gọn gàng -->
-            <div style="background: #fffcf5; padding: 10px; border-radius: 6px; border: 1px solid #ffeaa7; margin-bottom: 15px; font-size: 13px; line-height: 1.6;">
-                💰 <b>Giá đã gồm phí Ship COD 25k tận nơi:</b><br>
-                • Mua lẻ 1 bộ: <b style="color: #d32f2f;">115.000đ</b> | • Combo 2 bộ: <b style="color: #d32f2f;">205.000đ</b><br>
-                • Combo 3 bộ: <b style="color: #d32f2f;">285.000đ</b> | • Combo 5 bộ: <b style="color: #d32f2f;">425.000đ</b>
-            </div>
-
-            <form id="productOrderForm">
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Họ và tên người nhận (*):</label>
-                    <input type="text" id="buyerName" placeholder="Nhập tên của bạn" required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Số điện thoại liên hệ (*):</label>
-                    <input type="tel" id="buyerPhone" placeholder="Nhập số điện thoại giao hàng" required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Địa chỉ nhận hàng toàn quốc (*):</label>
-                    <input type="text" id="buyerAddress" placeholder="Ghi rõ Số nhà, Tên đường, Thôn/Xã, Huyện, Tỉnh..." required style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Chọn số lượng đặt mua:</label>
-                    <select id="buyerQuantity" style="width: 100%; padding: 9px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; background: #fff; font-weight: bold; color: #d32f2f; cursor: pointer;">
-                        <option value="1 bộ - 115k cả ship">Mua lẻ 1 bộ — 115.000đ</option>
-                        <option value="2 bộ - 205k cả ship">Combo 2 bộ — 205.000đ</option>
-                        <option value="3 bộ - 285k cả ship">Combo 3 bộ — 285.000đ</option>
-                        <option value="5 bộ - 425k cả ship">Combo 5 bộ — 425.000đ</option>
-                        <option value="10 bộ - 725k cả ship">Combo 10 bộ — 725.000đ</option>
-                    </select>
-                </div>
-
-                <div style="margin-bottom: 15px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 4px; font-size: 13px; color: var(--dark);">Hình thức thanh toán (*):</label>
-                    <div style="display: flex; gap: 15px; margin-top: 5px;">
-                        <label style="display: flex; align-items: center; gap: 4px; font-size: 13px; cursor: pointer; color: var(--dark);">
-                            <input type="radio" name="paymentMethod" value="COD" checked style="cursor: pointer;"> 📦 Giao hàng COD toàn quốc
-                        </label>
-                    </div>
-                </div>
-
-                <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 12px; border-radius: 4px; font-weight: bold; font-size: 15px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 10px rgba(46, 125, 50, 0.2); transition: 0.3s;">
-                    🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
-                </button>
-            </form>
-        </div>
-
-    </div>
-</section>
-<!-- ================= KẾT THÚC KHỐI BÁN HÀNG ================= -->
-        <!-- ================= BẮT ĐẦU KHỐI BẢNG GIÁ CHÈN THÊM ================= -->
-        <section class="price-section" style="padding: 40px 20px; background: var(--light); text-align: center; width: 100%; box-sizing: border-box;">
-            <h2 style="color: var(--primary); font-size: 22px; text-transform: uppercase; margin-bottom: 5px; font-weight: bold;">💰 Bảng Giá Dịch Vụ Sửa Khóa</h2>
-            <p style="color: var(--gray); font-size: 14px; margin-bottom: 30px; margin-top: 0;">(Giá công khai - Báo trước khi làm - Không phát sinh phụ phí)</p>
-            
-            <div class="price-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
-                
-                <!-- Thẻ 1: Cứu hộ Ô tô -->
-                <div class="price-card" style="background: #fff; padding: 25px 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); text-align: left;">
-                    <h3 style="color: var(--dark); margin-top: 0; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px;">🚗 Cứu Hộ Khóa Ô Tô</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🚨 Mở khóa cửa/cốp quên chìa:</span><strong style="color: var(--primary);">từ 200k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🚨 Cứu hộ ô tô hết bình ắc quy:</span><strong style="color: var(--primary);">từ 200k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Làm chìa Remote/Smartkey:</span><strong style="color: var(--gray); font-weight: normal; font-size: 13px;">Gọi báo giá</strong></li>
-                    </ul>
-                </div>
-
-                <!-- Thẻ 2: Khóa Cửa Nhà -->
-                <div class="price-card" style="background: #fff; padding: 25px 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); text-align: left;">
-                    <h3 style="color: var(--dark); margin-top: 0; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px;">🔒 Khóa Cửa & Két Sắt</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Mở khóa tay gạt/khóa bấm:</span><strong style="color: var(--primary);">từ 100k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Sửa/Mở khóa cửa cuốn:</span><strong style="color: var(--primary);">từ 200k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>⚙️ Dò mã/Mở khóa két sắt:</span><strong style="color: var(--primary);">từ 300k</strong></li>
-                    </ul>
-                </div>
-
-                <!-- Thẻ 3: Xe Máy & Smartkey -->
-                <div class="price-card" style="background: #fff; padding: 25px 20px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-top: 4px solid var(--primary); text-align: left;">
-                    <h3 style="color: var(--dark); margin-top: 0; margin-bottom: 15px; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 10px;">🛵 Xe Máy & Smartkey</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; line-height: 2.2;">
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Đánh lại chìa cơ mất hết:</span><strong style="color: var(--primary);">từ 150k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Làm lại Smartkey (mất ID):</span><strong style="color: var(--primary);">từ 500k</strong></li>
-                        <li style="display: flex; justify-content: space-between; color: var(--dark);"><span>🔑 Sao chép thêm chìa remote:</span><strong style="color: var(--primary);">từ 250k</strong></li>
-                    </ul>
-                </div>
-
-            </div>
-            <p style="margin-top: 25px; font-style: italic; color: #ff4757; font-size: 13px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4; padding: 0 10px;">
-                * Lưu ý: Giá thực tế có thể thay đổi tùy thuộc vào khung giờ đêm muộn hoặc khoảng cách di chuyển xa tại Lào Cai. Anh em thợ luôn báo giá chốt trước khi đi!
-            </p>
-        </section>
-        <!-- ================= KẾT THÚC KHỐI BẢNG GIÁ CHÈN THÊM ================= -->
-         <!-- ================= KHỐI FEEDBACK & VIDEO THỰC TẾ CHÈN THÊM ================= -->
-        <section class="feedback-section" style="padding: 40px 20px; background: #ffffff; text-align: center; font-family: Arial, sans-serif; width: 100%; box-sizing: border-box;">
-            <h2 style="color: var(--primary); font-size: 22px; text-transform: uppercase; margin-bottom: 5px; font-weight: bold;">⭐ Khách Hàng Nói Về Quang Huy</h2>
-            <p style="color: var(--gray); font-size: 14px; margin-bottom: 30px; margin-top: 0;">(100% hình ảnh và đánh giá thực tế từ người dân tại Lào Cai)</p>
-
-            <!-- Khối danh sách feedback dạng lưới -->
-            <div class="feedback-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto 35px auto;">
-                
-                <!-- Đánh giá 1 -->
-                <div class="feedback-card" style="background: var(--light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">TN</div>
-                        <div>
-                            <strong style="color: var(--dark); display: block; font-size: 15px;">Anh Trần Nam</strong>
-                            <span style="color: var(--gray); font-size: 12px;">📍 TP. Lào Cai</span>
-                        </div>
-                    </div>
-                    <div style="color: #ffb703; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
-                    <p style="margin: 0; color: var(--dark); font-size: 14px; line-height: 1.5; font-style: italic;">
-                        "Bị quên chìa khóa trong cốp xe tay ga lúc 9h đêm ở quảng trường, gọi anh Huy tầm 15 phút là thấy chạy xe tới luôn. Anh mở bằng đồ nghề chuyên dụng nhanh rẹt rẹt không một vết xước. Giá hạt dẻ, thợ nhiệt tình!"
-                    </p>
-                </div>
-
-                <!-- Đánh giá 2 -->
-                <div class="feedback-card" style="background: var(--light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">MH</div>
-                        <div>
-                            <strong style="color: var(--dark); display: block; font-size: 15px;">Chị Minh Hồng</strong>
-                            <span style="color: var(--gray); font-size: 12px;">📍 Thị trấn Bảo Thắng</span>
-                        </div>
-                    </div>
-                    <div style="color: #ffb703; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
-                    <p style="margin: 0; color: var(--dark); font-size: 14px; line-height: 1.5; font-style: italic;">
-                        "Cửa cuốn nhà mình bị kẹt khóa không mở được để kinh doanh. May có anh Huy qua xử lý kịp thời, thợ tay nghề cao nhìn máy móc sửa rất chuyên nghiệp. Báo giá rõ ràng trước khi làm nên rất yên tâm."
-                    </p>
-                </div>
-
-                <!-- Đánh giá 3 -->
-                <div class="feedback-card" style="background: var(--light); padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary); text-align: left; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
-                        <div style="width: 40px; height: 40px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; color: #555;">QV</div>
-                        <div>
-                            <strong style="color: var(--dark); display: block; font-size: 15px;">Chú Quang Vinh</strong>
-                            <span style="color: var(--gray); font-size: 12px;">📍 Cam Đường</span>
-                        </div>
-                    </div>
-                    <div style="color: #ffb703; margin-bottom: 8px;">⭐⭐⭐⭐⭐</div>
-                    <p style="margin: 0; color: var(--dark); font-size: 14px; line-height: 1.5; font-style: italic;">
-                        "Tôi bị mất hết chìa khóa remote ô tô, gọi hãng thì báo giá cao lại phải chờ lâu.Đội ngũ thợ Anh Huy đến tận nhà dò mã làm lại chìa mới tinh chỉ trong vòng hơn 1 tiếng. Chìa dùng mượt, bấm nhạy như zin."
-                    </p>
-                </div>
-
-            </div>
-
-            <!-- Nút bấm chuyển hướng sang xem video Facebook -->
-                    <!-- Nút bấm kết nối Fanpage Sửa Khóa Quang Huy chính xác -->
-        <div class="video-cta-box" style="background: #f0f2f5; padding: 25px; border-radius: 8px; max-width: 700px; margin: 20px auto; box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); text-align: center;">
-            <p style="margin: 0 0 15px 0; color: var(--dark); font-size: 15px; font-weight: bold; font-family: Arial, sans-serif;">
-                🎬 Xem thêm các video sửa khóa thực tế của Quang Huy tại đây
-            </p>
-            <a href="https://www.facebook.com/Suakhoaquanghuy" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: #1877f2; color: white; padding: 12px 25px; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 15px; box-shadow: 0 4px 10px rgba(24, 119, 242, 0.3); transition: 0.3s; font-family: Arial, sans-serif;">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24" style="margin-top: 1px;"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                TÌM HIỂU THÊM VỀ SỬA KHOÁ QUANG HUY TRÊN FANPAGE
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">Sửa Khóa Quang Huy</a>
+            <a href="tel:0855278627" class="hotline-btn">
+                <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-.58-.158L1.744 1.485a1.656 1.656 0 0 0-1.154 1.372c-.168 1.01.744 3.39 2.52 6.16 1.776 2.769 3.654 4.545 5.252 5.035a1.658 1.658 0 0 0 1.464-.232l1.37-1.17a.678.678 0 0 0-.012-1.015l-2.42-2.154a.678.678 0 0 0-.573-.104l-1.079.515c-.473.226-.975-.125-1.25-.417a10.519 10.519 0 0 1-2.42-2.42c-.292-.275-.643-.777-.417-1.25l.516-1.079a.678.678 0 0 0-.104-.573L4.9 1.485a.678.678 0 0 0-.256-.256zM1.494 2.415a.656.656 0 0 1 .458-.54l1.332-.232a.178.178 0 0 1 .152.042l1.621 1.621a.178.178 0 0 1-.027.242l-.515.515a1.156 1.156 0 0 0-.213.911 11.455 11.455 0 0 0 2.84 2.84 1.156 1.156 0 0 0 .911-.213l.515-.515a.178.178 0 0 1 .242-.027l1.621 1.621a.178.178 0 0 1-.042.152l-.232 1.332a.656.656 0 0 1-.54.458c-1.29.395-2.95-.916-4.508-2.474-1.558-1.558-2.869-3.218-2.474-4.508z"/></svg>
+                0855.27.86.27
             </a>
         </div>
+    </header>
+
+    <section class="hero">
+        <h1>Cứu Hộ Khóa Lào Cai Cấp Tốc 24/7</h1>
+        <p>Thợ sửa khóa chuyên nghiệp, có mặt sau 15 phút. Giá rẻ, uy tín, công khai minh bạch.</p>
+    </section>
+
+    <section class="services">
+        <h2>Dịch Vụ Chuyên Nghiệp Tận Nơi</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🔑 Khóa Ô Tô</h3>
+                <p>Mở khóa cửa, khóa cốp ô tô bằng đồ nghề chuyên dụng không cạy cửa. Làm lại chìa smartkey cấp tốc.</p>
             </div>
-        </section>
-        <!-- ================= KẾT THÚC KHỐI FEEDBACK & VIDEO THỰC TẾ ================= -->
-    <div class="commit-box" style="max-width: 1100px; margin: 30px auto; padding: 20px; text-align: center; box-sizing: border-box;">
-    <h3>CAM KẾT TỪ THỢ KHÓA QUANG HUY</h3>
-    <ul class="commit-list">
-      <li>✅ Thợ tay nghề cao, tác phong nhanh nhẹn</li>
-      <li>✅ Báo giá minh bạch, không phát sinh phụ phí</li>
-      <li>✅ Đảm bảo an toàn cơ học, không phá cửa gãy ổ</li>
-      <li>✅ Bảo hành linh kiện thay thế dài hạn</li>
-    </ul>
-  </div>
+            <div class="service-card">
+                <h3>🏍️ Khóa Xe Máy</h3>
+                <p>Sửa khóa, đánh lại chìa xe máy làm rơi mất. Cấu hình chìa remote Smartkey chính hãng giá rẻ.</p>
+            </div>
+            <div class="service-card">
+                <h3>🏠 Khóa Nhà & Cửa</h3>
+                <p>Mở khóa tay gạt, khóa bấm, sửa lỗi kẹt khóa cửa cuốn ban đêm. Thay ổ khóa chính hãng bảo hành dài hạn.</p>
+            </div>
+            <div class="service-card">
+                <h3>💼 Khóa Két Sắt</h3>
+                <p>Dò mã số két sắt, mở két bị quên mật khẩu hoặc mất chìa. Bảo mật thông tin khách hàng tuyệt đối.</p>
+            </div>
+        </div>
+    </section>
 
-  <div class="form-container">
-    <h3>YÊU CẦU CỨU HỘ NHANH</h3>
-    <form onsubmit="handleFormSubmit(event)">
-      <div class="form-group">
-        <label>Số điện thoại của bạn (*):</label>
-        <input type="tel" id="userPhone" placeholder="Nhập số điện thoại liên hệ" required>
-      </div>
-     <div class="form-group">
-        <label>Vấn đề đang gặp:</label>
-        <select id="lockIssue">
-          <option value="" disabled selected>-- Vui lòng chọn vấn đề bạn đang gặp --</option>
-          
-          <optgroup label="Khóa Ô Tô">
-            <option>Quên chìa / Kẹt khóa / Hết bình ô tô</option>
-          </optgroup>
-          
-          <optgroup label="Khóa Xe Máy">
-            <option>Mất chìa Smartkey xe máy (SH, Lead, Vision...)</option>
-            <option>Mất chìa khóa xe máy cơ (Cần làm chìa mới)</option>
-          </optgroup>
-          
-          <optgroup label="Khóa Cửa Nhà / Két Sắt">
-            <option>Cần hỗ trợ mở khóa cửa chính / Cửa cổng</option>
-            <option>Cần hỗ trợ mở khóa cửa phòng khách / Phòng ngủ</option>
-            <option>Cần hỗ trợ mở khóa cửa nhà vệ sinh</option>
-            <option>Kẹt khóa két sắt / Cửa cuốn</option>
-            <option>Cần thay lõi khóa / Lắp khóa mới</option>
-          </optgroup>
-          
-          <optgroup label="Vấn đề Khác">
-            <option>Vấn đề khác (Cần thợ tư vấn thêm)</option>
-          </optgroup>
-        </select>
-      </div>
-                         <!-- Ô nhập vấn đề khác cho khách tự viết tay chèn thêm -->
-                <div class="form-group" style="margin-bottom: 15px; text-align: left;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 5px; color: var(--dark);">Nếu là vấn đề khác, vui lòng nhập vào đây:</label>
-                    <input type="text" id="userCustomIssue" placeholder="Ví dụ: Kẹt khóa tủ, mất chìa khóa két sắt..." style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-family: Arial, sans-serif;">
-                </div>
+    <!-- ================= KHỐI BÁN HÀNG TÍCH HỢP ẢNH & VIDEO SẢN PHẨM ================= -->
+    <section class="product-sale-section" style="padding: 40px 20px; background: #fffcf5; width: 100%; box-sizing: border-box; border-top: 3px dashed var(--primary); border-bottom: 3px dashed var(--primary); margin: 30px 0; font-family: Arial, sans-serif;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div style="background: var(--primary); color: white; display: inline-block; padding: 5px 15px; font-weight: bold; border-radius: 4px; font-size: 13px; text-transform: uppercase; margin-bottom: 10px;">🔥 SẢN PHẨM CHUYÊN DỤNG TỰ THAY TẠI NHÀ</div>
+            <h2 style="color: #d32f2f; font-size: 24px; text-transform: uppercase; margin: 0 0 5px 0; font-weight: bold;">⚙️ LÕI KHÓA RUỘT ĐẶC CHỐNG KẸT CAO CẤP</h2>
+            <p style="color: var(--dark); font-size: 14px; max-width: 700px; margin: 0 auto; line-height: 1.5;">Lõi khóa tay gạt hợp kim đúc đặc chuẩn 7cm kèm 3 chìa, đinh ốc đầy đủ. Tự thay thế tại nhà chỉ mất 3 phút!</p>
+        </div>
 
-      <div class="form-group">
-                           <label>Địa chỉ tại Lào Cai:</label>
-                    <input type="text" id="userAddress" placeholder="Ví dụ: Cốc Lếu, Kim Tân, Bảo Thắng..." required>
-                    <small style="display: block; color: var(--gray); font-size: 12px; margin-top: 5px; line-height: 1.4; text-align: left;">
-                        📍 <strong>Phục vụ nhanh tại:</strong> TP. Lào Cai, Cam Đường, Bát Xát, Bảo Thắng, Xuân Giao, Gia Phú, Tằng Loỏng, Phú Nhuận, Võ Lao, Bắc Ngầm, Bảo Nhai, Phong Hải...
-                    </small>
-
-      </div>
-      <button type="submit" class="btn-submit">YÊU CẦU THỢ GỌI LẠI NGAY</button>
-    </form>
-  </div>
-     <div class="faq-container">
-  <h2 class="faq-title">Kiến Thức & Câu Hỏi Về Lõi Khoá (DIY)</h2>
-  
-  <details class="faq-item">
-    <summary>1. Lõi khoá chìa vi tính và chìa răng cưa khác nhau như thế nào?</summary>
-    <p><strong>Chìa răng cưa:</strong> Là loại chìa truyền thống (như khoá Việt Tiệp), có các rãnh cắt hình răng cưa ở một hoặc hai cạnh. Phù hợp cho nhu cầu cơ bản, chất lượng sử dụng tốt, độ bền tương đối cao và giá thành rẻ.<br><br>
-    <strong>Chìa vi tính:</strong> Bề mặt chìa phẳng, được khoan các lỗ bi nông sâu khác nhau bằng máy vi tính. Loại này có chất lượng sử dụng tốt và cắm chiều nào cũng mở được rất tiện lợi.</p>
-  </details>
-  <details class="faq-item">
-    <summary>2. Làm sao để biết cửa nhà tôi dùng lõi khoá kích thước bao nhiêu?</summary>
-    <p>Hầu hết cửa nhôm, cửa nhựa lõi thép, cửa sắt hiện nay đều dùng <strong>chuẩn lõi dài 71mm (hệ 70)</strong>. Để chắc chắn, bạn tháo con ốc định vị ở hông cửa, rút lõi cũ ra và đo chiều dài tổng thể. Nếu khoảng 70 - 71mm thì lắp vừa zin lõi phổ thông.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>3. Thay lõi khoá có cần phải thay cả bộ tay gạt và thân khoá không?</summary>
-    <p><strong>Hoàn toàn không.</strong> Lõi khoá là một bộ phận độc lập. Nếu tay gạt và chốt cửa vẫn hoạt động bình thường, bạn chỉ cần mua lõi khoá mới thay vào, tiết kiệm được 70-80% chi phí so với việc thay cả bộ.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>4. Tôi là phụ nữ, không rành kỹ thuật thì có tự thay lõi khoá được không?</summary>
-    <p><strong>Rất dễ dàng!</strong> Bạn chỉ cần duy nhất 1 chiếc tua vít 4 cạnh. Vặn 1 con ốc ở hông cửa, rút lõi cũ ra, đút lõi mới vào và siết ốc lại. Quá trình này chỉ mất từ 2-3 phút, ai cũng có thể tự làm được.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>5. Tại sao tôi vừa lắp lõi mới vào nhưng vặn chìa lại bị rít, sượng?</summary>
-    <p>Tình trạng này thường do lúc lắp bạn <strong>siết con ốc định vị quá chặt</strong> làm lõi khoá bị ép nén. Cách xử lý: Nới lỏng ốc ra khoảng nửa vòng, vặn thử lại chìa cho trơn tru rồi mới siết vừa tay lại.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>6. Cửa đang khóa, tôi bị mất hết chìa thì có tự tháo lõi được không?</summary>
-    <p>Nếu cửa đang KHÓA, chốt cam bên trong lõi nằm ngang chặn lại nên bạn <strong>không thể rút lõi ra được</strong> dù có tháo ốc. Trường hợp này bắt buộc phải gọi thợ đến dùng dụng cụ chuyên dụng mở hoặc khoan phá thì mới thay lõi mới được.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>7. Lõi khoá mua về có kèm sẵn chìa không?</summary>
-    <p>Có. Bất kỳ bộ lõi khoá mới nào được bán ra cũng kèm sẵn một bộ chìa nguyên bản từ nhà sản xuất (thường từ 3 đến 5 chìa tùy hãng).</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>8. Lõi khoá của tôi bị gãy ngậm chìa bên trong, có phải thay mới không?</summary>
-    <p>Nếu đoạn gãy lòi ra một chút, bạn có thể dùng nhíp rút ra và đi đánh chìa mới. Tuy nhiên, nếu gãy sâu hoặc ổ khóa đã cũ, giải pháp kinh tế và an toàn nhất là thay luôn một lõi khoá mới để tránh kẹt rít về sau.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>9. Lõi khoá có phân biệt cửa mở ra ngoài hay mở vào trong không?</summary>
-    <p>Không. Lõi khoá cửa gạt được thiết kế đối xứng, dùng chung cho mọi hướng cửa: mở ra, mở vào, cửa quay trái hay quay phải đều lắp được.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>10. Mua lõi khoá tự thay rẻ hơn gọi thợ đến nhà bao nhiêu?</summary>
-    <p>Tự thay lõi khoá giúp bạn tiết kiệm được <strong>chi phí đi lại và tiền công tháo lắp</strong> (thường dao động từ 100.000đ - 200.000đ tùy khu vực). Bạn chỉ phải trả đúng giá niêm yết của vật tư.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>11. Ổ khoá kẹt, tôi nhỏ dầu ăn hoặc nhớt xe máy vào bôi trơn được không?</summary>
-    <p><strong>TUYỆT ĐỐI KHÔNG.</strong> Dầu ăn hoặc nhớt xe máy sẽ đóng cặn thành bùn khi gặp bụi, làm kẹt cứng các viên bi vi tính. Chỉ nên dùng bình xịt RP7, WD-40 hoặc bột than chì để bôi trơn ổ khóa.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>12. Lõi khoá bằng Đồng thau (Brass) và Hợp kim có gì khác nhau? Nên mua loại nào?</summary>
-    <p><strong>Hợp kim ruột đặc:</strong> Đây là lựa chọn thông minh và tiết kiệm nhất, được đa số gia đình tin dùng. Nhờ cấu tạo đúc đặc, lõi cầm chắc tay, hoạt động trơn tru và độ bền thực tế hoàn toàn đạt từ 2 - 5 năm. Sản phẩm đáp ứng xuất sắc nhu cầu cho cửa thông phòng, cửa chính, nhà vệ sinh với mức giá cực kỳ bình dân.<br><br>
-    <strong>Đồng thau:</strong> Có khả năng chống ăn mòn nhỉnh hơn một chút, thường chỉ thật sự cần thiết nếu vị trí cửa nhà bạn bị hắt mưa nắng trực tiếp ngoài trời. Tuy nhiên, giá thành của lõi đồng cao hơn khá nhiều. Do đó, nếu dùng cho cửa trong nhà hoặc cửa có mái che thì mua lõi hợp kim ruột đặc vẫn là bài toán kinh tế và hiệu quả nhất.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>13. Cửa phòng ngủ, nhà vệ sinh thì nên dùng loại lõi nào cho tiện?</summary>
-    <p>Bạn nên dùng lõi khoá <strong>1 đầu chìa - 1 đầu núm vặn</strong>. Đầu núm vặn quay vào trong phòng giúp bạn khóa/mở cửa nhanh chóng bằng tay mà không cần tìm chìa, rất an toàn để thoát hiểm khi khẩn cấp.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>14. Có thể làm 1 chìa khóa mở được nhiều phòng (Master Key) không?</summary>
-    <p><strong>Hoàn toàn được.</strong> Sửa Khóa Quang Huy có thể can thiệp kỹ thuật ghép bi ổ khóa để tạo ra hệ thống "Chìa chủ". Khách thuê cầm chìa phòng đó, còn chủ nhà cầm 1 chìa duy nhất mở được tất cả, rất tiện cho nhà trọ, khách sạn.</p>
-  </details>
-</div>
-<style>
-  .faq-container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 0 15px;
-    font-family: Arial, sans-serif;
-  }
-  .faq-title {
-    text-align: center;
-    color: #0b2239; /* Xanh sẫm giống màu banner */
-    margin-bottom: 30px;
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  .faq-item {
-    margin-bottom: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  .faq-item summary {
-    background-color: #f8f9fa;
-    padding: 16px 20px;
-    font-weight: 600;
-    cursor: pointer;
-    font-size: 16px;
-    color: #333;
-    list-style: none;
-    position: relative;
-    transition: background-color 0.2s;
-  }
-  /* Ẩn mũi tên mặc định của trình duyệt */
-  .faq-item summary::-webkit-details-marker {
-    display: none;
-  }
-  /* Tạo mũi tên tùy chỉnh */
-  .faq-item summary::after {
-    content: "▼";
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
-    color: #d4af37; /* Màu vàng Gold */
-    transition: transform 0.3s ease;
-  }
-  /* Hiệu ứng xoay mũi tên khi mở */
-  .faq-item[open] summary::after {
-    transform: translateY(-50%) rotate(180deg);
-  }
-  .faq-item summary:hover {
-    background-color: #e9ecef;
-    color: #0b2239;
-  }
-  .faq-item p {
-    padding: 16px 20px;
-    margin: 0;
-    color: #444;
-    line-height: 1.6;
-    border-top: 1px solid #eee;
-    font-size: 15px;
-  }
-</style>
-
-<div class="faq-container">
-  <h2 class="faq-title">Câu Hỏi Thường Gặp Về Dịch Vụ</h2>
-  
-  <details class="faq-item">
-    <summary>1. Gọi thợ đến sửa khóa thì bao lâu sẽ có mặt?</summary>
-    <p>Tại khu vực Lào Cai và các phường lân cận, thợ khóa Quang Huy sẽ di chuyển ngay lập tức sau khi tiếp nhận cuộc gọi. Thời gian có mặt trung bình chỉ từ <strong>15 - 30 phút</strong> tùy khoảng cách giao thông, giúp bạn không phải chờ đợi lâu làm lỡ dở công việc.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>2. Mở khóa ô tô, khóa nhà có làm xước sơn hay hỏng ổ không?</summary>
-    <p><strong>Cam kết 100% không cạy phá.</strong> Chúng tôi sử dụng các công cụ mở khóa chuyên dụng (tool Lishi, cây mở kỹ thuật) để thao tác trực tiếp qua khe bi mượt mà như dùng chìa khóa gốc. Cửa xe, cửa nhà sẽ được mở an toàn, không xước sơn, không móp méo và ổ khóa vẫn sử dụng lại bình thường.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>3. Rơi mất toàn bộ Smartkey xe máy, có làm lại được không?</summary>
-    <p><strong>Hoàn toàn làm lại được mà không cần thay ổ mới.</strong> Thợ khóa được trang bị máy móc chuyên sâu để kết nối và đọc lại mã ID gốc từ hộp điều khiển của xe (Honda, Yamaha, Vespa...). Sau đó sẽ cấp lại mã và đồng bộ với chìa Smartkey mới ngay tại chỗ. Chi phí rẻ hơn rất nhiều so với việc vào hãng thay toàn bộ hệ thống.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>4. Dịch vụ báo giá như thế nào? Gọi đến xem có mất tiền không?</summary>
-    <p>Uy tín tạo nên thương hiệu. Sửa Khóa Quang Huy luôn áp dụng quy trình: <strong>Nghe tình trạng -> Báo giá chuẩn xác -> Khách đồng ý mới làm.</strong> Nếu báo giá xong mà khách hàng thấy không phù hợp, chúng tôi vui vẻ ra về và bạn không mất bất kỳ một khoản phí nào.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>5. Thợ khóa có giữ lại bản sao chìa khóa hay mã Smartkey của tôi không?</summary>
-    <p><strong>Tuyệt đối không.</strong> Đạo đức nghề nghiệp là nguyên tắc sống còn của chúng tôi. Với chìa cơ, bàn giao toàn bộ chìa cắt mới. Với Smartkey, máy móc thiết lập xong sẽ tự động xóa dữ liệu. Thợ cũng sẽ hướng dẫn bạn cách xóa mã chìa cũ bị mất để kẻ gian nhặt được cũng không mở được xe.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>6. Mở két sắt mất chìa, quên mã có phải khoan đục phanh két ra không?</summary>
-    <p>Với kinh nghiệm chuyên sâu, chúng tôi ưu tiên dò mã số và mở ổ khóa bằng kỹ thuật. Chỉ trong những trường hợp cực kỳ hy hữu (hộp số bị kẹt vỡ hỏng nặng từ trước), thợ mới phải dùng đến phương án khoan một lỗ rất nhỏ bằng đầu đũa, sau đó sẽ trám thẩm mỹ lại như mới.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>7. Thời gian hỗ trợ ngoài giờ ra sao? Có bị chém giá không?</summary>
-    <p>Chúng tôi có đội ngũ hỗ trợ kỹ thuật linh hoạt các ngày trong tuần, kể cả ngoài giờ hành chính. Chi phí luôn được báo minh bạch và chốt rõ ràng trước khi thợ xuất phát, tuyệt đối không có tình trạng đến nơi mới viện cớ vòi vĩnh hay tăng giá.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>8. Chìa khóa đánh mới hoặc thay ổ khóa có được bảo hành không?</summary>
-    <p>Có. Tất cả các dịch vụ (làm lại chìa, thay ổ khóa mới, thay pin, thay vỏ Smartkey) đều có chế độ bảo hành rõ ràng từ 6 tháng đến 2 năm tùy linh kiện. Nếu có lỗi do nhà sản xuất hoặc lỗi kỹ thuật, chúng tôi sẽ hỗ trợ tận tình.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>9. Khóa trái cửa ở ngoài, gọi thợ mở có cần chứng minh giấy tờ không?</summary>
-    <p>Để đảm bảo an ninh trật tự, đối với các trường hợp mở khóa két sắt, nhà riêng hoặc xe máy ban đêm/khu vực vắng, thợ khóa có thể sẽ yêu cầu bạn xác nhận thông tin cơ bản (ví dụ: chứng minh thư khớp với thông tin hàng xóm, hoặc giấy tờ xe) trước khi tiến hành mở khóa.</p>
-  </details>
-
-  <details class="faq-item">
-    <summary>10. Gọi Quang Huy là thợ trực tiếp làm hay qua trung gian? Có đội giá không?</summary>
-    <p>Chúng tôi sở hữu <strong>đội ngũ thợ khóa trực tiếp</strong> của cửa hàng, hoàn toàn không qua tổng đài trung gian hay "cò" mồi bán khách. Vì vậy, mức giá luôn đảm bảo bình dân và hợp lý nhất thị trường. Thực tế hỏng gì, làm như thế nào thì báo đúng giá như vậy. Tuyệt đối không vẽ thêm bệnh hay kê cao giá để ăn hoa hồng. Khách hàng hoàn toàn yên tâm vì được làm việc với thợ thực chiến, tối ưu chi phí và bảo hành tận gốc.</p>
-  </details>
-
-</div>
-  <footer>
-    <p><strong>Cơ sở Sửa Khóa Quang Huy Lào Cai</strong></p>
-    <p>Hotline phục vụ 24/7: 0855.27.86.27</p>
-    <p>© 2026 Sửa Khóa Quang Huy. Uy tín tạo dựng niềm tin.</p>
-  </footer>
-<!-- ================= NÚT GỌI ĐIỆN LẮC LƯ DI ĐỘNG CHÈN THÊM ================= -->
-<style>
-@keyframes quick-call-shake {
-    0% { transform: translate(0, 0) rotate(0deg); }
-    2% { transform: translate(2px, 1px) rotate(1deg); }
-    4% { transform: translate(1px, -1px) rotate(-2deg); }
-    6% { transform: translate(-3px, 1px) rotate(0deg); }
-    8% { transform: translate(0px, 2px) rotate(-1deg); }
-    10% { transform: translate(-1px, -2px) rotate(1deg); }
-    12% { transform: translate(0, 0) rotate(0deg); }
-    100% { transform: translate(0, 0) rotate(0deg); }
-}
-.btn-call-fixed {
-    position: fixed;
-    bottom: 90px; /* Đẩy lên cao hơn thanh sticky bar cũ của anh để không bị đè lên nhau */
-    right: 20px;
-    background: #ff4757;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    animation: quick-call-shake 2s infinite;
-    font-family: Arial, sans-serif;
-}
-</style>
-
-<a href="tel:0855278627" class="btn-call-fixed">
-   📞 GỌI THỢ NGAY (0855.27.86.27)
-</a>
-<!-- ================= KẾT THÚC NÚT GỌI ĐIỆN LẮC LƯ ================= -->
-  <div class="sticky-bar">
-    <a href="https://zalo.me/0855278627" target="_blank" class="btn-sticky btn-sticky-zalo">
-      💬 Nhắn tin Zalo
-    </a>
-    <a href="tel:0855278627" class="btn-sticky btn-sticky-call">
-      📞 Điện thoại
-    </a>
-  </div>
-
-  <script>
-    // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
-    function handleFormSubmit(e) {
-      e.preventDefault();
-
-      const btn = document.querySelector('.btn-submit');
-      btn.innerText = 'ĐANG GỬI THÔNG TIN...';
-      btn.disabled = true;
-
-      const phone = document.getElementById('userPhone').value;
-      let issue = document.getElementById('lockIssue').value;
-      const customIssue = document.getElementById('userCustomIssue').value;
-      const address = document.getElementById('userAddress').value;
-
-      // Nếu khách gõ vấn đề khác, gộp chung vào biến issue để không bị mất dữ liệu
-      if (customIssue.trim() !== "") {
-          issue = issue + " | Chi tiết thêm: " + customIssue;
-      }
-
-      const webhookUrl = "https://hook.us2.make.com/mzcwycoijndbzlly0fykxnp7sjitv6y3";
-
-      // Đóng gói dữ liệu gửi đi
-      const data = {
-        formType: "CỨU HỘ KHÓA",
-        phone: phone,
-        issue: issue,
-        address: address,
-        time: new Date().toLocaleString('vi-VN')
-      };
-
-      fetch(webhookUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        alert('Đã gửi yêu cầu thành công! Thợ khóa Quang Huy sẽ liên hệ lại ngay theo số ' + phone);
-        btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
-        btn.disabled = false;
-        e.target.reset();
-      })
-      .catch(error => {
-        alert('Mạng chậm, bạn vui lòng gọi trực tiếp Hotline nhé!');
-        btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
-        btn.disabled = false;
-      });
-    }
-
-    // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
-    document.getElementById('productOrderForm').addEventListener('submit', function(e) {
-      e.preventDefault(); 
-      
-      const btn = this.querySelector('button[type="submit"]');
-      const originalText = btn.innerText;
-      btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
-      btn.disabled = true;
-
-      // Thu thập dữ liệu
-      const buyerName = document.getElementById('buyerName').value;
-      const buyerPhone = document.getElementById('buyerPhone').value;
-      const buyerAddress = document.getElementById('buyerAddress').value;
-      const buyerQuantity = document.getElementById('buyerQuantity').value;
-      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
-      
-      const webhookUrl = "https://hook.us2.make.com/mzcwycoijndbzlly0fykxnp7sjitv6y3";
-
-      // Đóng gói dữ liệu chuẩn JSON y như form 1
-      const data = {
-          formType: "MUA LÕI KHÓA",
-          buyerName: buyerName,
-          buyerPhone: buyerPhone,
-          buyerAddress: buyerAddress,
-          buyerQuantity: buyerQuantity,
-          paymentMethod: paymentMethod,
-          time: new Date().toLocaleString('vi-VN')
-      };
-
-      fetch(webhookUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-      })
-      .then(response => {
-          alert('🎉 Đặt hàng thành công! Cảm ơn ' + buyerName + '. Chúng tôi sẽ xác nhận ' + buyerPhone + ' và gửi đơn đặt hàng thông qua ship COD!');
-          btn.innerText = originalText;
-          btn.disabled = false;
-          e.target.reset(); 
-      })
-      .catch(error => {
-          alert('Có lỗi mạng, vui lòng liên hệ Zalo hoặc gọi trực tiếp Hotline!');
-          btn.innerText = originalText;
-          btn.disabled = false;
-      });
-    });
-  </script>
-</body>
-</html>
+        <div class="product-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; align-items: start;">
+            <!-- CỘT BÊN TRÁI: VIDEO & HÌNH ẢNH THỰC TẾ -->
+            <div class="product-media-col" style="background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); border: 1px solid #eee;">
+                <h4 style="margin: 0 0 10px 0; color: var(--dark); font-size: 15px; display: flex; align-items: center; gap: 5px;">🎬 Video thực tế sản phẩm:</h4>
+                <div class="video-wrapper" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 6px; background: #000; margin-bottom: 20px;">
