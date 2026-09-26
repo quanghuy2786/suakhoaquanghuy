@@ -566,7 +566,6 @@
     <p>Hotline phục vụ 24/7: 0855.27.86.27</p>
     <p>© 2026 Sửa Khóa Quang Huy. Uy tín tạo dựng niềm tin.</p>
   </footer>
-<!-- ================= NÚT GỌI ĐIỆN LẮC LƯ DI ĐỘNG CHÈN THÊM ================= -->
 <style>
 @keyframes quick-call-shake {
     0% { transform: translate(0, 0) rotate(0deg); }
@@ -578,31 +577,60 @@
     12% { transform: translate(0, 0) rotate(0deg); }
     100% { transform: translate(0, 0) rotate(0deg); }
 }
-.btn-call-fixed {
+.btn-request-fixed {
     position: fixed;
-    bottom: 90px; /* Đẩy lên cao hơn thanh sticky bar cũ của anh để không bị đè lên nhau */
-    right: 20px;
-    background: #ff4757;
-    color: white;
-    padding: 12px 20px;
+    bottom: 85px;
+    right: 15px;
+    background: linear-gradient(45deg, #d32f2f, #ff3838);
+    color: #ffffff;
+    padding: 11px 18px;
     border-radius: 50px;
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 13.5px;
+    font-weight: 800;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.45);
     z-index: 9999;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 8px;
-    animation: quick-call-shake 2s infinite;
+    animation: quick-call-shake 2.5s infinite;
     font-family: Arial, sans-serif;
+    cursor: pointer;
+    border: 2px solid #ffffff;
+}
+.btn-request-fixed:hover {
+    transform: scale(1.05);
 }
 </style>
 
-<a href="tel:0855278627" class="btn-call-fixed">
-   📞 GỌI THỢ NGAY (0855.27.86.27)
+<a href="javascript:void(0)" class="btn-request-fixed" onclick="cuonDenFormCuuHo()">
+    🚨 YÊU CẦU THỢ GỌI LẠI NGAY
 </a>
-<!-- ================= KẾT THÚC NÚT GỌI ĐIỆN LẮC LƯ ================= -->
+
+<script>
+function cuonDenFormCuuHo() {
+    const formBox = document.querySelector('.form-container');
+    if (formBox) {
+        formBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        formBox.style.transition = 'all 0.4s ease';
+        formBox.style.boxShadow = '0 0 25px rgba(211, 47, 47, 0.7)';
+        formBox.style.border = '2px solid #d32f2f';
+
+        setTimeout(() => {
+            const phoneInput = document.getElementById('userPhone');
+            if (phoneInput) {
+                phoneInput.focus();
+            }
+        }, 600);
+
+        setTimeout(() => {
+            formBox.style.boxShadow = '';
+            formBox.style.border = '';
+        }, 2500);
+    }
+}
+</script>
   <div class="sticky-bar">
     <a href="https://zalo.me/0855278627" target="_blank" class="btn-sticky btn-sticky-zalo">
       💬 Nhắn tin Zalo
