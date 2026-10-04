@@ -430,10 +430,10 @@
                 </div>
 
       <div class="form-group">
-                           <label>Địa chỉ tại Lào Cai:</label>
-                    <input type="text" id="userAddress" placeholder="Ví dụ: Cốc Lếu, Kim Tân, Bảo Thắng..." required>
+                           <label>Địa chỉ :</label>
+                    <input type="text" id="userAddress" placeholder="Ví dụ: Cốc Lếu,Kim Tân,SaPa,Gia Phú,Bắc Ngầm,xuân giao ,Tằng Lỏong,Bảo Thắng..." required>
                     <small style="display: block; color: var(--gray); font-size: 12px; margin-top: 5px; line-height: 1.4; text-align: left;">
-                        📍 <strong>Phục vụ nhanh tại:</strong> TP. Lào Cai, Cam Đường, Bát Xát, Bảo Thắng, Xuân Giao, Gia Phú, Tằng Loỏng, Phú Nhuận, Võ Lao, Bắc Ngầm, Bảo Nhai, Phong Hải...
+                        📍 <strong>Phục vụ nhanh tại:</strong> TP. Lào Cai, Cam Đường,SAPA,Bát Xát, Xuân Giao, Gia Phú, Tằng Loỏng, Phú Nhuận, Võ Lao, Bắc Ngầm, Bảo Nhai, Phong Hải...
                     </small>
 
       </div><!-- Ô xác thực chống spam -->
@@ -722,7 +722,7 @@ function cuonDenFormCuuHo() {
      // --- KIỂM TRA CHỐNG SPAM DÙNG CHUNG RECAPTCHA ---
     var widgetRes = document.querySelector('.g-recaptcha textarea');
     if (!widgetRes || widgetRes.value.length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở ô from mua hàng reCAPCHA phía bên trên trước khi gửi vì lý do bảo mật chúng tôi buộc phải dùng chung một ô reCAPCHA,kéo lên phía from trên tích vào ô reCAPCHA và quay lại đây để gửi !");
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở ô from mua hàng reCAPCHA phía bên trên trước khi gửi vì lý do bảo mật chúng tôi buộc phải dùng chung một ô reCAPCHA,kéo lên phía from bên trên tích vào ô reCAPCHA và quay lại đây để gửi !");
         const btn = this.querySelector('button[type="submit"]');
         if (btn) { btn.disabled = false; }
         return;
@@ -813,7 +813,7 @@ function cuonDenFormCuuHo() {
           body: JSON.stringify(data)
       })
       .then(response => {
-          alert('🎉 Đặt hàng thành công! Cảm ơn ' + buyerName + '. Chúng tôi sẽ xác nhận ' + buyerPhone + ' và gửi đơn đặt hàng thông qua ship COD!');
+          alert('🎉 Đặt hàng thành công! Cảm ơn ' + buyerName + '. Chúng tôi đã xác nhận ' + buyerPhone + ' và gửi đơn đặt hàng thông qua ship COD!');
           btn.innerText = originalText;
           btn.disabled = false;
           e.target.reset(); 
