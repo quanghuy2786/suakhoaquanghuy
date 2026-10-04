@@ -255,8 +255,7 @@
                     </div>
                 </div>
                 <!-- Ô xác thực chống spam -->
-<div class="g-recaptcha" id="recaptcha-muakhoa" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
-```[cite: 2, 4]
+<div class="g-recaptcha" data-sitekey="6LcRRN4tAAAAABN1ovWnqfQkFVkq1BIkzkxNcjtO"></div>
                 <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); transition: 0.3s; letter-spacing: 0.5px;">
                     🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
                 </button>
@@ -438,8 +437,7 @@
                     </small>
 
       </div><!-- Ô xác thực chống spam -->
-<div class="g-recaptcha" id="recaptcha-cuuho" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
-```[cite: 2, 4]
+<div class="g-recaptcha" data-sitekey="6LcRRN4tAAAAABN1ovWnqfQkFVkq1BIkzkxNcjtO"></div>
       <button type="submit" class="btn-submit">GỬI</button>
     </form>
   </div>
@@ -718,14 +716,18 @@ function cuonDenFormCuuHo() {
   </div>
 
   <script>
-    // --- KIỂM TRA RECAPTCHA FORM CỨU HỘ ---
-var responseCuuHo = grecaptcha.getResponse(0); // Ô reCAPTCHA đầu tiên (index 0)
-if (responseCuuHo.length === 0) {
-    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Cứu hộ!");
-    const btn = this.querySelector('button[type="submit"]');
-    if (btn) { btn.disabled = false; }
-    return;
-}
+    // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
+    function handleFormSubmit(e) {
+      e.preventDefault();
+     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
+    if (grecaptcha.getResponse().length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = false;
+        }
+        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
+    }
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
@@ -772,14 +774,15 @@ if (responseCuuHo.length === 0) {
     // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
     document.getElementById('productOrderForm').addEventListener('submit', function(e) {
       e.preventDefault(); 
-     // --- KIỂM TRA RECAPTCHA FORM MUA LÕI KHÓA ---
-var responseMuaKhoa = grecaptcha.getResponse(1); // Ô reCAPTCHA thứ hai (index 1)
-if (responseMuaKhoa.length === 0) {
-    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Mua lõi khóa!");
-    const btn = this.querySelector('button[type="submit"]');
-    if (btn) { btn.disabled = false; }
-    return;
-}
+     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
+    if (grecaptcha.getResponse().length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.disabled = false;
+        }
+        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
+    }
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
       btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
