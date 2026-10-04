@@ -256,7 +256,6 @@
                 </div>
                 <!-- Ô xác thực chống spam -->
 <div class="g-recaptcha" id="recaptcha-muakhoa" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
-```[cite: 2, 4]
                 <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); transition: 0.3s; letter-spacing: 0.5px;">
                     🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
                 </button>
@@ -439,7 +438,6 @@
 
       </div><!-- Ô xác thực chống spam -->
 <div class="g-recaptcha" id="recaptcha-cuuho" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
-```[cite: 2, 4]
       <button type="submit" class="btn-submit">GỬI</button>
     </form>
   </div>
@@ -718,17 +716,14 @@ function cuonDenFormCuuHo() {
   </div>
 
   <script>
-    // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
-    function handleFormSubmit(e) {
-      e.preventDefault();
-     // --- KIỂM TRA CHỐNG SPAM DÙNG CHUNG RECAPTCHA ---
-    var widgetRes = document.querySelector('.g-recaptcha textarea');
-    if (!widgetRes || widgetRes.value.length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phía trên trước khi gửi!");
-        const btn = this.querySelector('button[type="submit"]');
-        if (btn) { btn.disabled = false; }
-        return;
-    }
+   // --- KIỂM TRA RECAPTCHA CỨU HỘ ---
+var widgetCuuHo = document.querySelector('#recaptcha-cuuho textarea');
+if (!widgetCuuHo || widgetCuuHo.value.length === 0) {
+    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Cứu hộ!");
+    const btn = this.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = false; }
+    return;
+}
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
@@ -772,18 +767,14 @@ function cuonDenFormCuuHo() {
       });
     }
 
-    // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
-    document.getElementById('productOrderForm').addEventListener('submit', function(e) {
-      e.preventDefault(); 
-     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
-    if (grecaptcha.getResponse().length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
-        const btn = this.querySelector('button[type="submit"]');
-        if (btn) {
-            btn.disabled = false;
-        }
-        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
-    }
+    // --- KIỂM TRA RECAPTCHA MUA LÕI KHÓA ---
+var widgetMuaKhoa = document.querySelector('#recaptcha-muakhoa textarea');
+if (!widgetMuaKhoa || widgetMuaKhoa.value.length === 0) {
+    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Mua lõi khóa!");
+    const btn = this.querySelector('button[type="submit"]');
+    if (btn) { btn.disabled = false; }
+    return;
+}
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
       btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
