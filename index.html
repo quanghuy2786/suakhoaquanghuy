@@ -719,15 +719,18 @@ function cuonDenFormCuuHo() {
     // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
     function handleFormSubmit(e) {
       e.preventDefault();
-     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
-    if (grecaptcha.getResponse().length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
+     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA CHO FORM CỨU HỘ ---
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi yêu cầu cứu hộ!");
         const btn = this.querySelector('button[type="submit"]');
         if (btn) {
+            btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
             btn.disabled = false;
         }
-        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
+        return; // Chặn lại, không cho gửi đi!
     }
+    // --------------------------------------------------
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
@@ -774,15 +777,18 @@ function cuonDenFormCuuHo() {
     // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
     document.getElementById('productOrderForm').addEventListener('submit', function(e) {
       e.preventDefault(); 
-     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
-    if (grecaptcha.getResponse().length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
+      // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi đặt hàng!");
         const btn = this.querySelector('button[type="submit"]');
         if (btn) {
+            btn.innerText = 'ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN'; // Hoặc chữ mặc định của nút
             btn.disabled = false;
         }
-        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
+        return; // Dừng lại, không cho gửi đơn đi nữa!
     }
+    // ------------------------------------
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
       btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
