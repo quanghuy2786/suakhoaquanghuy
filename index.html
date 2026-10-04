@@ -722,7 +722,7 @@ function cuonDenFormCuuHo() {
      // --- KIỂM TRA CHỐNG SPAM DÙNG CHUNG RECAPTCHA ---
     var widgetRes = document.querySelector('.g-recaptcha textarea');
     if (!widgetRes || widgetRes.value.length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phía trên trước khi gửi!");
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở ô from mua hàng reCAPCHA phía bên trên trước khi gửi vì lý do bảo mật chúng tôi buộc phải dùng chung một ô reCAPCHA,kéo lên phía from trên tích vào ô reCAPCHA và quay lại đây để gửi !");
         const btn = this.querySelector('button[type="submit"]');
         if (btn) { btn.disabled = false; }
         return;
