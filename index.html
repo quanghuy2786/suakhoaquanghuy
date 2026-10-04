@@ -439,7 +439,6 @@
                     </small>
 
       </div><!-- Ô xác thực chống spam -->
-<div id="recaptcha-cuuho"></div>
       <button type="submit" class="btn-submit">GỬI</button>
     </form>
   </div>
@@ -718,14 +717,6 @@ function cuonDenFormCuuHo() {
   </div>
 
   <script>
-   // --- KIỂM TRA RECAPTCHA CỨU HỘ ---
-var widgetCuuHo = document.querySelector('#recaptcha-cuuho textarea');
-if (!widgetCuuHo || widgetCuuHo.value.length === 0) {
-    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Cứu hộ!");
-    const btn = this.querySelector('button[type="submit"]');
-    if (btn) { btn.disabled = false; }
-    return;
-}
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
