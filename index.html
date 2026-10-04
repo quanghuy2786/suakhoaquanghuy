@@ -719,7 +719,18 @@ function cuonDenFormCuuHo() {
     // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
     function handleFormSubmit(e) {
       e.preventDefault();
-
+     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA CHO FORM CỨU HỘ ---
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi yêu cầu cứu hộ!");
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.innerText = 'YÊU CẦU THỢ GỌI LẠI NGAY';
+            btn.disabled = false;
+        }
+        return; // Chặn lại, không cho gửi đi!
+    }
+    // --------------------------------------------------
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
