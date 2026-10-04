@@ -766,7 +766,18 @@ function cuonDenFormCuuHo() {
     // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
     document.getElementById('productOrderForm').addEventListener('submit', function(e) {
       e.preventDefault(); 
-      
+      // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi đặt hàng!");
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.innerText = 'ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN'; // Hoặc chữ mặc định của nút
+            btn.disabled = false;
+        }
+        return; // Dừng lại, không cho gửi đơn đi nữa!
+    }
+    // ------------------------------------
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
       btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
