@@ -719,14 +719,13 @@ function cuonDenFormCuuHo() {
     // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
     function handleFormSubmit(e) {
       e.preventDefault();
-     // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
-    if (grecaptcha.getResponse().length === 0) {
-        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
+     // --- KIỂM TRA CHỐNG SPAM DÙNG CHUNG RECAPTCHA ---
+    var widgetRes = document.querySelector('.g-recaptcha textarea');
+    if (!widgetRes || widgetRes.value.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phía trên trước khi gửi!");
         const btn = this.querySelector('button[type="submit"]');
-        if (btn) {
-            btn.disabled = false;
-        }
-        return; // Dừng lại, chặn không cho gửi đi khi chưa tích!
+        if (btn) { btn.disabled = false; }
+        return;
     }
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
