@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
-<head><
+<head><!-- Google reCAPTCHA v2 API -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
      <!-- ================= TỐI ƯU HIỂN THỊ TRÊN ZALO, FACEBOOK & GOOGLE ================= -->
     <title>Sửa Khóa Quang Huy Lào Cai - Cứu Hộ Khóa Tận Nơi 24/7</title>
     <meta name="description" content="Thợ sửa khóa Quang Huy tại Lào Cai chuyên mở khóa ô tô, xe máy, khóa nhà, két sắt cấp tốc. Có mặt sau 15 phút, giá công khai minh bạch, phục vụ chuyên nghiệp 24/7.">
@@ -256,7 +255,7 @@
                     </div>
                 </div>
                 <!-- Ô xác thực chống spam -->
-<div class="g-recaptcha" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
+<div class="g-recaptcha" data-sitekey="6LcRRN4tAAAAABN1ovWnqfQkFVkq1BIkzkxNcjtO"></div>
                 <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); transition: 0.3s; letter-spacing: 0.5px;">
                     🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
                 </button>
@@ -438,6 +437,7 @@
                     </small>
 
       </div><!-- Ô xác thực chống spam -->
+<div class="g-recaptcha" data-sitekey="6LcRRN4tAAAAABN1ovWnqfQkFVkq1BIkzkxNcjtO"></div>
       <button type="submit" class="btn-submit">GỬI</button>
     </form>
   </div>
@@ -716,6 +716,10 @@ function cuonDenFormCuuHo() {
   </div>
 
   <script>
+    // ================= 1. XỬ LÝ FORM GỌI THỢ CỨU HỘ =================
+    function handleFormSubmit(e) {
+      e.preventDefault();
+
       const btn = document.querySelector('.btn-submit');
       btn.innerText = 'ĐANG GỬI THÔNG TIN...';
       btn.disabled = true;
@@ -758,12 +762,22 @@ function cuonDenFormCuuHo() {
         btn.disabled = false;
       });
     }
-    if (grecaptcha.getResponse().length === 0) {
-    alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
-    const btn = this.querySelector('button[type="submit"]');
-    if (btn) { btn.disabled = false; }
-    return;
-}
+
+    // ================= 2. XỬ LÝ FORM MUA LÕI KHÓA =================
+    document.getElementById('productOrderForm').addEventListener('submit', function(e) {
+      e.preventDefault(); 
+      // --- KIỂM TRA CHỐNG SPAM RECAPTCHA ---
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (recaptchaResponse.length === 0) {
+        alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi đặt hàng!");
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) {
+            btn.innerText = 'ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN'; // Hoặc chữ mặc định của nút
+            btn.disabled = false;
+        }
+        return; // Dừng lại, không cho gửi đơn đi nữa!
+    }
+    // ------------------------------------
       const btn = this.querySelector('button[type="submit"]');
       const originalText = btn.innerText;
       btn.innerText = 'ĐANG XỬ LÝ ĐƠN HÀNG...';
@@ -807,8 +821,5 @@ function cuonDenFormCuuHo() {
       });
     });
   </script>
-    });
-  };
-</script>
 </body>
 </html>
