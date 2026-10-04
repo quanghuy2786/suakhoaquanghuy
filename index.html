@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head><
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
      <!-- ================= TỐI ƯU HIỂN THỊ TRÊN ZALO, FACEBOOK & GOOGLE ================= -->
     <title>Sửa Khóa Quang Huy Lào Cai - Cứu Hộ Khóa Tận Nơi 24/7</title>
@@ -256,7 +256,8 @@
                     </div>
                 </div>
                 <!-- Ô xác thực chống spam -->
-<div id="recaptcha-muakhoa"></div>
+<div class="g-recaptcha" data-sitekey="6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO"></div>
+```[cite: 2, 4]
                 <button type="submit" style="width: 100%; background: #2e7d32; color: white; border: none; padding: 15px; border-radius: 6px; font-weight: bold; font-size: 16px; cursor: pointer; text-transform: uppercase; box-shadow: 0 4px 12px rgba(46, 125, 50, 0.3); transition: 0.3s; letter-spacing: 0.5px;">
                     🚀 ĐẶT HÀNG NGAY - KIỂM TRA MỚI TRẢ TIỀN
                 </button>
@@ -767,11 +768,8 @@ if (!widgetCuuHo || widgetCuuHo.value.length === 0) {
         btn.disabled = false;
       });
     }
-
-    // --- KIỂM TRA RECAPTCHA MUA LÕI KHÓA ---
-var widgetMuaKhoa = document.querySelector('#recaptcha-muakhoa textarea');
-if (!widgetMuaKhoa || widgetMuaKhoa.value.length === 0) {
-    alert("Vui lòng xác nhận 'Tôi không phải là người máy' ở phần Mua lõi khóa!");
+    if (grecaptcha.getResponse().length === 0) {
+    alert("Vui lòng xác nhận 'Tôi không phải là người máy' trước khi gửi!");
     const btn = this.querySelector('button[type="submit"]');
     if (btn) { btn.disabled = false; }
     return;
@@ -819,13 +817,6 @@ if (!widgetMuaKhoa || widgetMuaKhoa.value.length === 0) {
       });
     });
   </script>
-<script>
-  var onloadCallback = function() {
-    grecaptcha.render('recaptcha-cuuho', {
-      'sitekey' : '6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO'
-    });
-    grecaptcha.render('recaptcha-muakhoa', {
-      'sitekey' : '6LcRRN4TAAAAABN1ovWnqfQkFVkq1BlkzkxNcjtO'
     });
   };
 </script>
