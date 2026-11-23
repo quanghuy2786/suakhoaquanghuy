@@ -1,0 +1,1 @@
+probe - kiem tra quyen ghi truc tiep cua connector, xoa sau khi xong
