@@ -86,3 +86,6 @@
 /* Ảnh thợ trong 4 thẻ dịch vụ trang chủ (27/11) */
 .card-photo{width:calc(100% + 3rem);height:190px;object-fit:cover;margin:-1.5rem -1.5rem 1.25rem;border-radius:1rem 1rem 0 0}
 .card-photo.photo-top{object-position:center top}
+/* Poster dịch vụ thay ảnh chìa khóa trong mục Nghe rõ vấn đề (27/11) */
+.editorial-photo.poster-full{min-height:0}
+.editorial-photo.poster-full img{height:auto;max-height:none;object-fit:contain}
