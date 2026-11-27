@@ -68,3 +68,6 @@
 .article-list li{padding:14px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
 .article-list li a{color:var(--navy);text-decoration:none;font-weight:700}
 .article-list li a:hover{text-decoration:underline}
+
+/* Hero: anh that (tho-khoa-quang-huy.avif) — giu mat trong khung o moi co man hinh */
+.hero-visual img{object-position:center 22%}
