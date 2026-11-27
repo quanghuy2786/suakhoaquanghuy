@@ -83,3 +83,6 @@
 .tip-card-body p{font-size:14px;color:var(--muted);line-height:1.55;margin:0 0 10px}
 .tip-card-body p.tip-date{font-size:13px;margin:0 0 8px}
 .tip-read{color:var(--blue);font-weight:700;font-size:14px;text-decoration:none}
+/* Ảnh thợ trong 4 thẻ dịch vụ trang chủ (27/11) */
+.card-photo{width:calc(100% + 3rem);height:190px;object-fit:cover;margin:-1.5rem -1.5rem 1.25rem;border-radius:1rem 1rem 0 0}
+.card-photo.photo-top{object-position:center top}
