@@ -89,3 +89,7 @@
 /* Poster dịch vụ thay ảnh chìa khóa trong mục Nghe rõ vấn đề (27/11) */
 .editorial-photo.poster-full{min-height:0}
 .editorial-photo.poster-full img{height:auto;max-height:none;object-fit:contain}
+/* Sửa thẻ dịch vụ 27/11: img gốc có max-width:100% kẹp chiều rộng ảnh thẻ */
+.card-photo{max-width:none}
+.card-photo.photo-left{object-position:left center}
+.link-row{display:flex;flex-wrap:wrap;gap:.25rem 1.75rem}
