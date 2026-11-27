@@ -71,3 +71,15 @@
 
 /* Hero: anh that (tho-khoa-quang-huy.avif) — giu mat trong khung o moi co man hinh */
 .hero-visual img{object-position:center 22%}
+
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}
+.tip-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,.06);border:1px solid var(--line);transition:transform .2s}
+.tip-card:hover{transform:translateY(-4px)}
+.tip-card img{width:100%;height:170px;object-fit:cover;display:block}
+.tip-card-body{padding:16px 18px 18px}
+.tip-card-body h3{font-size:16px;line-height:1.4;margin:0 0 8px}
+.tip-card-body h3 a{color:var(--navy);text-decoration:none}
+.tip-card-body h3 a:hover{color:var(--blue)}
+.tip-card-body p{font-size:14px;color:var(--muted);line-height:1.55;margin:0 0 10px}
+.tip-card-body p.tip-date{font-size:13px;margin:0 0 8px}
+.tip-read{color:var(--blue);font-weight:700;font-size:14px;text-decoration:none}
