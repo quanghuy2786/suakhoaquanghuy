@@ -93,10 +93,28 @@
 .card-photo{max-width:none}
 .card-photo.photo-left{object-position:left center}
 .link-row{display:flex;flex-wrap:wrap;gap:.25rem 1.75rem}
-/* Gallery ảnh thực tế trang Khóa ô tô 28/11: 11 ảnh, lưới 1/2/3 cột */
+/* Gallery ảnh thực tế trang Khóa ô tô 28/11: 11 ảnh, lưới 1/2/3 cột — nâng cấp 28/11: ảnh to hơn, hover phóng to, bấm mở lightbox */
 .photo-gallery{display:grid;gap:1rem}
-.photo-gallery figure{margin:0;border:1px solid var(--line);border-radius:1rem;overflow:hidden;background:#fff}
-.photo-gallery img{width:100%;height:220px;object-fit:cover}
+.photo-gallery figure{margin:0;border:1px solid var(--line);border-radius:1rem;overflow:hidden;background:#fff;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease}
+.photo-gallery figure:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(16,42,67,.18)}
+.photo-gallery figure:focus-visible{outline:3px solid #0067c0;outline-offset:2px}
+.photo-gallery img{width:100%;height:240px;object-fit:cover;transition:transform .4s ease}
+.photo-gallery figure:hover img{transform:scale(1.06)}
 .photo-gallery figcaption{padding:.9rem 1rem;font-size:.95rem;color:var(--muted)}
 @media(min-width:480px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:1024px){.photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1024px){.photo-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}.photo-gallery img{height:280px}}
+/* Lightbox xem ảnh to — ảnh hiện tối đa 1200px (đúng kích thước gốc) nên không vỡ */
+.lightbox{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(9,20,32,.92);padding:1rem}
+.lightbox[hidden]{display:none}
+.lightbox figure{margin:0;max-width:1200px;width:100%;text-align:center}
+.lightbox img{max-width:100%;max-height:78vh;width:auto;height:auto;object-fit:contain;border-radius:.5rem;background:#000}
+.lightbox figcaption{color:#fff;padding:.75rem 0 0;font-size:1rem}
+.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:50%;width:44px;height:44px;font-size:1.5rem;line-height:1;cursor:pointer}
+.lightbox-close{top:1rem;right:1rem}
+.lightbox-prev{left:.75rem;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:.75rem;top:50%;transform:translateY(-50%)}
+.lightbox-count{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:#fff;margin:0;font-size:.95rem}
+/* Danh sách hãng xe trang Khóa ô tô */
+.brand-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.5rem}
+.brand-list li{border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-weight:600;font-size:.95rem;background:#fff}
+.brand-note{color:var(--muted);margin-top:1rem}
